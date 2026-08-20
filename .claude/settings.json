@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": ".claude/hooks/guardian-kane-stop.sh" } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Edit|Write", "hooks": [ { "type": "command", "command": ".claude/hooks/guardian-kane-post-tool-use.sh" } ] }
+    ]
+  }
+}

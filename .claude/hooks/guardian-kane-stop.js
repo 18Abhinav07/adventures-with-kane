@@ -21,7 +21,18 @@ export function decide({ tasks }, { probeReady, runKane }) {
 
   // Step 2: manual verification mode
   if (claimed.verification_mode === 'manual') {
-    return { decision: 'allow', additionalContext: `Please confirm T${claimed.id.replace('T', '')} manually — no browser-observable surface for Kane to check.` };
+    // Claude signals confirmation via `manual_confirmed`, never by writing a
+    // KANE_* state itself — the hook alone owns that transition.
+    if (!claimed.manual_confirmed) {
+      return { decision: 'allow', additionalContext: `T${claimed.id.replace('T', '')} is CLAIMED_DONE with no browser-observable surface for Kane to check. To confirm it, set manual_confirmed: true on its task-tracker.md row (do not change state directly), then stop again.` };
+    }
+    claimed.state = 'KANE_VERIFIED';
+    claimed.last_verdict = { status: 'pass', summary: 'Manually confirmed — no browser-observable surface.', reason: null };
+    const nextManual = nextPlannedTask(tasks);
+    if (nextManual) {
+      return { decision: 'deny', permissionDecisionReason: `T-${claimed.id} verified. Start T-${nextManual.id}: ${nextManual.title}. Mark it IN_PROGRESS in task-tracker.md before editing files.` };
+    }
+    return { decision: 'allow', done: true, systemMessage: 'GuardianKane: all tasks KANE_VERIFIED. Build complete.' };
   }
 
   // Step 4: dev server readiness probe

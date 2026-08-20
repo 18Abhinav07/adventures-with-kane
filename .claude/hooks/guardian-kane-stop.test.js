@@ -15,11 +15,31 @@ describe('decide', () => {
     expect(result.decision).toBe('allow');
   });
 
-  it('step 2: allows stop and surfaces manual confirmation for verification_mode manual', () => {
+  it('step 2: allows stop and asks for manual_confirmed when unset, does not touch state', () => {
     const tasks = [task({ state: 'CLAIMED_DONE', verification_mode: 'manual' })];
     const result = decide({ tasks }, { probeReady: () => true, runKane: () => { throw new Error('should not be called'); } });
     expect(result.decision).toBe('allow');
-    expect(result.additionalContext).toMatch(/confirm T1 manually/);
+    expect(result.additionalContext).toMatch(/manual_confirmed: true/);
+    expect(tasks[0].state).toBe('CLAIMED_DONE');
+  });
+
+  it('step 2: manual_confirmed true -> hook itself transitions to KANE_VERIFIED, done', () => {
+    const tasks = [task({ state: 'CLAIMED_DONE', verification_mode: 'manual', manual_confirmed: true })];
+    const result = decide({ tasks }, { probeReady: () => true, runKane: () => { throw new Error('should not be called'); } });
+    expect(tasks[0].state).toBe('KANE_VERIFIED');
+    expect(result.decision).toBe('allow');
+    expect(result.done).toBe(true);
+  });
+
+  it('step 2: manual_confirmed true with a next PLANNED task -> deny, names it', () => {
+    const tasks = [
+      task({ id: 'T1', state: 'CLAIMED_DONE', verification_mode: 'manual', manual_confirmed: true, depends_on: [] }),
+      task({ id: 'T2', state: 'PLANNED', depends_on: ['T1'], title: 'Complete task' })
+    ];
+    const result = decide({ tasks }, { probeReady: () => true, runKane: () => { throw new Error('should not be called'); } });
+    expect(tasks[0].state).toBe('KANE_VERIFIED');
+    expect(result.decision).toBe('deny');
+    expect(result.permissionDecisionReason).toMatch(/T2/);
   });
 
   it('step 3: resets a stale KANE_VERIFYING task (>5min) back to IN_PROGRESS', () => {
