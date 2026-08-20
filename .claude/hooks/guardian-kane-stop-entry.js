@@ -5,13 +5,15 @@ import { execSync } from 'node:child_process';
 
 const TRACKER_PATH = '.testmuai/task-tracker.md';
 
+const DEV_SERVER_URL = 'http://localhost:8080';
+
 function probeReady() {
   try {
-    execSync('curl -sf http://localhost:5173 -o /dev/null', { timeout: 3000 });
+    execSync(`curl -sf ${DEV_SERVER_URL} -o /dev/null`, { timeout: 3000 });
     return true;
   } catch {
     try {
-      execSync('sleep 3 && curl -sf http://localhost:5173 -o /dev/null', { timeout: 6000 });
+      execSync(`sleep 3 && curl -sf ${DEV_SERVER_URL} -o /dev/null`, { timeout: 6000 });
       return true;
     } catch {
       return false;
