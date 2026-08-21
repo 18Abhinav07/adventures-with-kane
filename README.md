@@ -149,6 +149,8 @@ Baseline's card layout is also visibly inconsistent in spacing/gaps across panel
 
 Full task-by-task tracker evidence for ORBITAL — including the sweep-caught chart-lock and export-toast defects that never reached the user in the gated build — lives in `orbital-kane/.testmuai/task-tracker.md` and is summarized in `OBSERVATIONS-AND-REPORTINGS.md`.
 
+**[→ Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb)** — a chronological, task-by-task audit of the Stop hook's own activity log for the ORBITAL build: every infra retry, every scripted-test pass/fail, the one real defect the sweep caught (T7) and forced a fix on, and all six human-reviewed overrides with their actual `kane-cli` bug-triage verdicts. Transcribed straight from `orbital-kane/.testmuai/kane-activity.log` (also archived at `docs/demo/kane-audit-trail.html`) — nothing on that page is invented.
+
 ---
 
 ## How to use this in any project
