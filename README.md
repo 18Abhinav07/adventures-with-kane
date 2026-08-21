@@ -19,6 +19,7 @@ This repo is both the harness itself (`lib/`, `.claude/hooks/`, `.claude/skills/
 | [Proof: four A/B experiments](#proof-four-ab-experiments-same-pattern-each-time) | Todo → Booking → Booking Studio → ORBITAL |
 | [ORBITAL flagship comparison](#orbital-the-flagship-comparison) | Screenshots: gated vs. unassisted, side by side |
 | [Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb) | Published artifact — full chronological audit log |
+| [Kane, watching and verifying](#kane-watching-and-verifying) | Real evidence-pack screenshots — a clean pass and a caught defect |
 | [Full build story](OBSERVATIONS-AND-REPORTINGS.md) | `OBSERVATIONS-AND-REPORTINGS.md` — PRD review to fix-loop, in depth |
 | [How to use this in any project](#how-to-use-this-in-any-project) | One-command install into any Claude Code project |
 
@@ -159,6 +160,33 @@ Baseline's card layout is also visibly inconsistent in spacing/gaps across panel
 Full task-by-task tracker evidence for ORBITAL — including the sweep-caught chart-lock and export-toast defects that never reached the user in the gated build — lives in `orbital-kane/.testmuai/task-tracker.md` and is summarized in `OBSERVATIONS-AND-REPORTINGS.md`.
 
 **[→ Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb)** — a chronological, task-by-task audit of the Stop hook's own activity log for the ORBITAL build: every infra retry, every scripted-test pass/fail, the one real defect the sweep caught (T7) and forced a fix on, and all six human-reviewed overrides with their actual `kane-cli` bug-triage verdicts. Transcribed straight from `orbital-kane/.testmuai/kane-activity.log` (also archived at `docs/demo/kane-audit-trail.html`) — nothing on that page is invented.
+
+### Kane, watching and verifying
+
+These are not mockups or screen recordings — they're built directly from the step-by-step browser screenshots inside real `kane-cli` `.evidence` packs, committed in this repo (`orbital-kane/.testmuai/evidence/`), replayed in the order Kane actually took the steps.
+
+<table>
+<tr>
+<td width="50%">
+
+**A clean verified pass** — Kane reviewing the ORBITAL portfolio alerts feed, step by step, until the assertion holds.
+
+![Kane CLI verifying the ORBITAL alerts feed, step by step, ending in a pass](docs/assets/kane-verify-pass.gif)
+
+*Source: `01f77c2f-fdc9-46d9-a285-3cee77626fe8.evidence`*
+
+</td>
+<td width="50%">
+
+**A defect caught** — Kane driving the chart-lock interaction and failing the run when the point-lock behavior didn't complete, the same class of defect written up in the Verification Trail above.
+
+![Kane CLI catching a real chart-lock defect mid-run](docs/assets/kane-verify-fail.gif)
+
+*Source: `31fcd34b-52f1-4f28-9212-729a3f6b6e47.evidence`*
+
+</td>
+</tr>
+</table>
 
 ### Run any demo app locally
 
