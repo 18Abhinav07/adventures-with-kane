@@ -6,12 +6,86 @@ GuardianKane sits between a coding agent and the word *done*. It intercepts Clau
 
 This repo is both the harness itself (`lib/`, `.claude/hooks/`, `.claude/skills/guardian-kane/`) and four live A/B experiments proving it changes outcomes — including **ORBITAL**, a dense institutional-dashboard build where the GuardianKane-gated run visibly outperforms an unassisted one shot, chart rendering and all.
 
-**[▶ 3-minute demo video](https://youtu.be/efTl_ZSmXUw)** — the app running, Kane catching a real defect, and the agent fixing it and re-verifying.
+**[▶ 3-minute demo (trimmed)](https://youtu.be/-4gbIv9hv_M)** — the app running, Kane catching a real defect, and the agent fixing it and re-verifying, cut down to the essentials.
+
+**[▶ 14-minute demo (full)](https://youtu.be/efTl_ZSmXUw)** — the complete walkthrough: the idea, the reasoning behind it, and the findings across all four experiments.
+
+---
+
+## How to use this in any project
+
+### 1. Install
+
+From a clone of this repo, point the installer at any git-initialized target project:
+
+```bash
+git clone https://github.com/18Abhinav07/adventures-with-kane.git
+cd adventures-with-kane
+./install.sh /path/to/your/project
+```
+
+What it does:
+- Copies `lib/*.js` (minus GuardianKane's own test files), the six `.claude/hooks/guardian-kane-*.{js,sh}` files, and `.claude/skills/guardian-kane/SKILL.md` into your project.
+- Merges (never overwrites) `Stop` and `PostToolUse` hook entries into your project's tracked `.claude/settings.json` — existing hooks you already have are left alone.
+- Adds `"type": "module"` and the `js-yaml` dependency to your `package.json` if they're missing (refuses to touch a project explicitly set to `"type": "commonjs"` — it prints a manual workaround instead of silently breaking your build).
+- Runs `npm install`.
+
+Prerequisites: `git`, `node`, and [`kane-cli`](https://testmuai.com) authenticated (`kane-cli login --oauth`, verify with `kane-cli whoami`). If `kane-cli` isn't on `PATH` yet, `install.sh` warns but still finishes — install it before your first `/guardian-kane start`.
+
+If you'd rather wire it in by hand (or your `package.json` really is CommonJS), copy the same files listed above manually and add the two hook entries yourself — see `.claude/skills/guardian-kane/SKILL.md` Step 9 in this repo for the exact JSON shape.
+
+### 2. Start a project
+
+Inside your target project, in Claude Code:
+
+```
+/guardian-kane start ./PRD.md
+```
+
+This runs the grilling pass over your PRD, writes `.testmuai/task-tracker.md`, and generates the per-task Kane test files. From here, just tell Claude Code to work through the tracker — the Stop hook enforces the rest automatically. You do not need to invoke Kane yourself; the hook does it every time Claude tries to stop with a `CLAIMED_DONE` task pending.
+
+### 3. Day-to-day commands
+
+| Command | What it does |
+|---|---|
+| `/guardian-kane start <prd-path>` | Grill the PRD, generate `task-tracker.md` + tests, begin the loop |
+| `/guardian-kane sync` | Re-sync tracker state against the current codebase (e.g. after manual edits) |
+| `/guardian-kane open-pr` | Open a PR once every task is `KANE_VERIFIED` |
+| `kane-cli whoami` | Check auth status |
+| `kane-cli login --oauth` | Authenticate `kane-cli` |
+
+### 4. What you'll see while it's running
+
+When Claude tries to stop with a task still open, you'll see a denial with a concrete reason instead of a silent pass:
+
+```json
+{
+  "decision": "block",
+  "reason": "T-9 failed verification (attempt 2/3). Summary: export toast never appeared.
+  Reason: the agent waited for a toast without queuing the export first. GuardianKane memory:
+  this resembles a bug previously seen on T-3 (\"Donut segment lock reads inverted\",
+  similarity 0.58) — check whether that earlier fix regressed or this is the same defect
+  resurfacing elsewhere. Flip T-9 to IN_PROGRESS first, then fix and re-claim done."
+}
+```
+
+Claude reads that, fixes the actual defect, and re-claims the task — GuardianKane runs the whole check again automatically the next time it tries to stop.
+
+### 5. Verifying the harness itself
+
+```bash
+npm test
+```
+
+135+ tests cover the full decision table (`decide()`), the tracker YAML parser/writer, the bug-memory similarity matcher, and the config resolver — all with mocked `kane-cli` calls, so the suite runs in seconds with no browser and no network.
+
+---
 
 ### Jump to
 
 | | |
 |---|---|
+| [Setup & install](#how-to-use-this-in-any-project) | One-command install into any Claude Code project |
 | [The problem](#the-problem) | Why "the agent says it's done" isn't evidence |
 | [How it works — the full loop](#how-it-works--the-full-loop) | PRD → grilling → tracker → Kane → decision |
 | [The state machine](#the-state-machine) | `PLANNED → … → KANE_VERIFIED` |
@@ -21,7 +95,6 @@ This repo is both the harness itself (`lib/`, `.claude/hooks/`, `.claude/skills/
 | [Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb) | Published artifact — full chronological audit log |
 | [Kane, watching and verifying](#kane-watching-and-verifying) | Real evidence-pack screenshots — a clean pass and a caught defect |
 | [Full build story](OBSERVATIONS-AND-REPORTINGS.md) | `OBSERVATIONS-AND-REPORTINGS.md` — PRD review to fix-loop, in depth |
-| [How to use this in any project](#how-to-use-this-in-any-project) | One-command install into any Claude Code project |
 
 ---
 
@@ -38,7 +111,7 @@ GuardianKane's answer: never take the agent's word for a task being finished. Ma
 ```mermaid
 flowchart TD
     PRD["📄 PRD.md"]
-    GRILL["🔎 Grilling\nstructured Q&A over the PRD — surfaces every\nambiguity (\"what happens when start == end?\",\n\"what does the priority badge default to?\")\nbefore a single line of code exists"]
+    GRILL["🔎 Grilling\nstructured Q&A over the PRD — surfaces every\nambiguity ('what happens when start == end?',\n'what does the priority badge default to?')\nbefore a single line of code exists"]
     TRACKER["📋 task-tracker.md\nYAML per task: id, title, prd_ref,\nverification_mode, test_file, depends_on, state"]
     GEN["🧪 kane-cli generate / design tests\nruns *_test.md files, one+ per task,\nscoped to that task's PRD section"]
     IMPL["✍️ Claude Code implements the task\nmarks it CLAIMED_DONE"]
@@ -206,75 +279,6 @@ npm run dev
 | `todo-kane` / `todo-baseline` | `npm install && npm run dev` | webpack-dev-server default (8080) |
 
 Running a `-kane` and a `-baseline` pair side by side to compare them live: pass `--port <n>` (webpack apps) or set `vite.config` / `--port <n>` (Vite apps) so the two dev servers don't collide on the same default port.
-
----
-
-## How to use this in any project
-
-### 1. Install
-
-From a clone of this repo, point the installer at any git-initialized target project:
-
-```bash
-git clone https://github.com/18Abhinav07/adventures-with-kane.git
-cd adventures-with-kane
-./install.sh /path/to/your/project
-```
-
-What it does:
-- Copies `lib/*.js` (minus GuardianKane's own test files), the six `.claude/hooks/guardian-kane-*.{js,sh}` files, and `.claude/skills/guardian-kane/SKILL.md` into your project.
-- Merges (never overwrites) `Stop` and `PostToolUse` hook entries into your project's tracked `.claude/settings.json` — existing hooks you already have are left alone.
-- Adds `"type": "module"` and the `js-yaml` dependency to your `package.json` if they're missing (refuses to touch a project explicitly set to `"type": "commonjs"` — it prints a manual workaround instead of silently breaking your build).
-- Runs `npm install`.
-
-Prerequisites: `git`, `node`, and [`kane-cli`](https://testmuai.com) authenticated (`kane-cli login --oauth`, verify with `kane-cli whoami`). If `kane-cli` isn't on `PATH` yet, `install.sh` warns but still finishes — install it before your first `/guardian-kane start`.
-
-If you'd rather wire it in by hand (or your `package.json` really is CommonJS), copy the same files listed above manually and add the two hook entries yourself — see `.claude/skills/guardian-kane/SKILL.md` Step 9 in this repo for the exact JSON shape.
-
-### 2. Start a project
-
-Inside your target project, in Claude Code:
-
-```
-/guardian-kane start ./PRD.md
-```
-
-This runs the grilling pass over your PRD, writes `.testmuai/task-tracker.md`, and generates the per-task Kane test files. From here, just tell Claude Code to work through the tracker — the Stop hook enforces the rest automatically. You do not need to invoke Kane yourself; the hook does it every time Claude tries to stop with a `CLAIMED_DONE` task pending.
-
-### 3. Day-to-day commands
-
-| Command | What it does |
-|---|---|
-| `/guardian-kane start <prd-path>` | Grill the PRD, generate `task-tracker.md` + tests, begin the loop |
-| `/guardian-kane sync` | Re-sync tracker state against the current codebase (e.g. after manual edits) |
-| `/guardian-kane open-pr` | Open a PR once every task is `KANE_VERIFIED` |
-| `kane-cli whoami` | Check auth status |
-| `kane-cli login --oauth` | Authenticate `kane-cli` |
-
-### 4. What you'll see while it's running
-
-When Claude tries to stop with a task still open, you'll see a denial with a concrete reason instead of a silent pass:
-
-```json
-{
-  "decision": "block",
-  "reason": "T-9 failed verification (attempt 2/3). Summary: export toast never appeared.
-  Reason: the agent waited for a toast without queuing the export first. GuardianKane memory:
-  this resembles a bug previously seen on T-3 (\"Donut segment lock reads inverted\",
-  similarity 0.58) — check whether that earlier fix regressed or this is the same defect
-  resurfacing elsewhere. Flip T-9 to IN_PROGRESS first, then fix and re-claim done."
-}
-```
-
-Claude reads that, fixes the actual defect, and re-claims the task — GuardianKane runs the whole check again automatically the next time it tries to stop.
-
-### 5. Verifying the harness itself
-
-```bash
-npm test
-```
-
-135+ tests cover the full decision table (`decide()`), the tracker YAML parser/writer, the bug-memory similarity matcher, and the config resolver — all with mocked `kane-cli` calls, so the suite runs in seconds with no browser and no network.
 
 ---
 
