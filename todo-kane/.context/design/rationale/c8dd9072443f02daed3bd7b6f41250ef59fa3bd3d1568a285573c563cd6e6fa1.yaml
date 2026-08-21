@@ -1,0 +1,9 @@
+anchor: ac-5
+combinatorial:
+  reason: 'Applied equivalence partitioning with one representative valid action class: deleting one existing task through its per-task "x" control. Reused the existing add-task scenario as setup precondition instead of minting duplicate setup coverage. Reviewed negative, boundary, security, and a11y techniques but did not mint separate scenarios because the current source only asserts the direct happy-path delete action and does not define confirmation, invalid delete attempts, alternate activations, or protected access semantics. No covering array was needed because this path has one grounded action dimension and one asserted outcome.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Applied equivalence partitioning with one representative valid action class: deleting one existing task through its per-task "x" control. Reused the existing add-task scenario as setup precondition instead of minting duplicate setup coverage. Reviewed negative, boundary, security, and a11y techniques but did not mint separate scenarios because the current source only asserts the direct happy-path delete action and does not define confirmation, invalid delete attempts, alternate activations, or protected access semantics. No covering array was needed because this path has one grounded action dimension and one asserted outcome.'

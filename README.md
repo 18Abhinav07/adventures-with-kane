@@ -6,6 +6,22 @@ GuardianKane sits between a coding agent and the word *done*. It intercepts Clau
 
 This repo is both the harness itself (`lib/`, `.claude/hooks/`, `.claude/skills/guardian-kane/`) and four live A/B experiments proving it changes outcomes — including **ORBITAL**, a dense institutional-dashboard build where the GuardianKane-gated run visibly outperforms an unassisted one shot, chart rendering and all.
 
+**[▶ 3-minute demo video](https://youtu.be/efTl_ZSmXUw)** — the app running, Kane catching a real defect, and the agent fixing it and re-verifying.
+
+### Jump to
+
+| | |
+|---|---|
+| [The problem](#the-problem) | Why "the agent says it's done" isn't evidence |
+| [How it works — the full loop](#how-it-works--the-full-loop) | PRD → grilling → tracker → Kane → decision |
+| [The state machine](#the-state-machine) | `PLANNED → … → KANE_VERIFIED` |
+| [Bug memory](#bug-memory--the-projects-error-surface-memory) | Local, dependency-free defect-recurrence detector |
+| [Proof: four A/B experiments](#proof-four-ab-experiments-same-pattern-each-time) | Todo → Booking → Booking Studio → ORBITAL |
+| [ORBITAL flagship comparison](#orbital-the-flagship-comparison) | Screenshots: gated vs. unassisted, side by side |
+| [Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb) | Published artifact — full chronological audit log |
+| [Full build story](OBSERVATIONS-AND-REPORTINGS.md) | `OBSERVATIONS-AND-REPORTINGS.md` — PRD review to fix-loop, in depth |
+| [How to use this in any project](#how-to-use-this-in-any-project) | One-command install into any Claude Code project |
+
 ---
 
 ## The problem
@@ -18,82 +34,75 @@ GuardianKane's answer: never take the agent's word for a task being finished. Ma
 
 ## How it works — the full loop
 
-```
-PRD.md
-  │
-  ▼
-grilling (a structured Q&A pass over the PRD to surface every
-ambiguity — "what happens when start == end?", "what does the
-priority badge default to?" — before a single line of code exists)
-  │
-  ▼
-task-tracker.md  (YAML front-matter per task: id, title, prd_ref,
-                   verification_mode, test_file, depends_on, state)
-  │
-  ▼
-kane-cli generate / kane-cli design tests
-  → produces runnable *_test.md files, one (or more) per task,
-    scoped to that task's PRD section
-  │
-  ▼
-Claude Code implements the task, marks it CLAIMED_DONE
-  │
-  ▼
-┌─────────────────── Stop hook fires ───────────────────┐
-│                                                          │
-│  guardian-kane-stop.js  decide({ tasks }, deps)          │
-│                                                          │
-│  1. any task stuck > 5min in KANE_VERIFYING?             │
-│     → reset to IN_PROGRESS, deny (crash recovery)        │
-│  2. nothing CLAIMED_DONE?  → allow, Claude keeps going    │
-│  3. verification_mode: manual?                           │
-│     → wait for an explicit manual_confirmed: true flag    │
-│  4. dev server not responding?  → allow + warn (can't      │
-│     verify what isn't running)                            │
-│  5. run kane-cli against the task's generated test file(s) │
-│     exit 0  → pass, go to step 6                          │
-│     exit 1  → FAIL, go to step 7                          │
-│     exit 2/3 → infra/timeout, state untouched, allow +     │
-│                warn (never punish the app for kane-cli's   │
-│                own flakiness)                              │
-│  6. scripted test passed — now run a SECOND, ad-hoc         │
-│     general-defect sweep against the live app, scoped to    │
-│     this task's PRD section. A scripted test only checks    │
-│     what it was told to check; the sweep looks for anything │
-│     else that's visibly wrong.                              │
-│     issue found → treat exactly like step 7 (shares the      │
-│                    same 3-attempt cap)                        │
-│     clean        → KANE_VERIFIED, advance to next task        │
-│  7. FAILED (scripted test or sweep) — check GuardianKane's    │
-│     bug memory: does this defect resemble one already fixed   │
-│     on an earlier task? If so, append that as extra context    │
-│     to the denial reason.                                      │
-│     attempts < 3 → KANE_FAILED, deny with the failure summary   │
-│                     + memory note, Claude must flip the task     │
-│                     back to IN_PROGRESS and actually fix it       │
-│     attempts = 3 → BLOCKED_NEEDS_HUMAN, allow (stop asking the    │
-│                     agent to keep guessing — a human looks now)    │
-│                                                                      │
-└──────────────────────────────────────────────────────────────────┘
-  │
-  ▼
-repeat per task until every row in task-tracker.md is KANE_VERIFIED
-  │
-  ▼
-/guardian-kane sync / open-pr
+```mermaid
+flowchart TD
+    PRD["📄 PRD.md"]
+    GRILL["🔎 Grilling\nstructured Q&A over the PRD — surfaces every\nambiguity (\"what happens when start == end?\",\n\"what does the priority badge default to?\")\nbefore a single line of code exists"]
+    TRACKER["📋 task-tracker.md\nYAML per task: id, title, prd_ref,\nverification_mode, test_file, depends_on, state"]
+    GEN["🧪 kane-cli generate / design tests\nruns *_test.md files, one+ per task,\nscoped to that task's PRD section"]
+    IMPL["✍️ Claude Code implements the task\nmarks it CLAIMED_DONE"]
+
+    PRD --> GRILL --> TRACKER --> GEN --> IMPL --> STOP
+
+    subgraph STOP["🛑 Stop hook fires — guardian-kane-stop.js decide()"]
+        direction TB
+        S1{"Task stuck > 5 min\nin KANE_VERIFYING?"}
+        S1 -->|yes| S1R["reset → IN_PROGRESS\ndeny (crash recovery)"]
+        S1 -->|no| S2{"Any task\nCLAIMED_DONE?"}
+        S2 -->|no| S2A["allow — Claude keeps going"]
+        S2 -->|yes| S3{"verification_mode:\nmanual?"}
+        S3 -->|yes| S3W["wait for explicit\nmanual_confirmed: true"]
+        S3 -->|no| S4{"Dev server\nresponding?"}
+        S4 -->|no| S4A["allow + warn\n(can't verify what isn't running)"]
+        S4 -->|yes| S5["run kane-cli against the\ntask's generated test file(s)"]
+        S5 -->|"exit 0 · pass"| S6
+        S5 -->|"exit 1 · FAIL"| S7
+        S5 -->|"exit 2/3 · infra/timeout"| S5A["state untouched\nallow + warn"]
+        S6["🕵️ run SECOND ad-hoc\ndefect sweep vs. live app,\nscoped to this task's PRD section"]
+        S6 -->|issue found| S7
+        S6 -->|clean| S6P["✅ KANE_VERIFIED\nadvance to next task"]
+        S7["❌ FAILED (test or sweep)\ncheck bug memory for a resembling\nprior defect — append to denial reason"]
+        S7 -->|attempts < 3| S7F["KANE_FAILED — deny with failure\nsummary + memory note.\nClaude flips task back to\nIN_PROGRESS and fixes it"]
+        S7 -->|attempts = 3| S7H["🙋 BLOCKED_NEEDS_HUMAN\nallow — stop asking the agent\nto keep guessing"]
+    end
+
+    S6P --> REPEAT["🔁 repeat per task until every row\nin task-tracker.md is KANE_VERIFIED"]
+    S7H --> REPEAT
+    REPEAT --> SYNC["/guardian-kane sync / open-pr"]
+
+    classDef pass fill:#1f8a5f,stroke:#0f5a3a,color:#fff
+    classDef fail fill:#b03636,stroke:#7a1f1f,color:#fff
+    classDef warn fill:#b8862b,stroke:#7a5a17,color:#fff
+    classDef human fill:#6b4fbb,stroke:#493580,color:#fff
+    class S6P pass
+    class S7,S7F fail
+    class S4A,S5A,S1R warn
+    class S7H human
 ```
 
 Every decision above is made by a pure function (`decide()`) with injected dependencies (`probeReady`, `runKane`, `runSweep`, `log`, `bugMemory`) — the whole state machine is unit-tested without ever opening a real browser, and the same logic runs identically whether the browser calls are real or mocked.
 
 ### The state machine
 
-```
-PLANNED → IN_PROGRESS → CLAIMED_DONE → KANE_VERIFYING ─┬─→ KANE_VERIFIED
-                              ▲                          │
-                              │                          ├─→ KANE_FAILED (attempts < 3)
-                              └──────────────────────────┘
-                                                          │
-                                                          └─→ BLOCKED_NEEDS_HUMAN (attempts = 3)
+```mermaid
+stateDiagram-v2
+    [*] --> PLANNED
+    PLANNED --> IN_PROGRESS
+    IN_PROGRESS --> CLAIMED_DONE : Claude claims the task finished
+    CLAIMED_DONE --> KANE_VERIFYING : Stop hook fires kane-cli
+    KANE_VERIFYING --> KANE_VERIFIED : test + sweep both clean
+    KANE_VERIFYING --> KANE_FAILED : test or sweep found an issue\n(attempts < 3)
+    KANE_VERIFYING --> BLOCKED_NEEDS_HUMAN : 3rd consecutive failure
+    KANE_FAILED --> IN_PROGRESS : Claude must fix the real code
+    KANE_VERIFIED --> [*]
+    BLOCKED_NEEDS_HUMAN --> [*]
+
+    note right of KANE_FAILED
+        Always routes back to IN_PROGRESS —
+        no path from "the browser proved this
+        is broken" straight back to CLAIMED_DONE
+        without the agent touching the code again.
+    end note
 ```
 
 `KANE_FAILED` always routes back to `IN_PROGRESS` — there is no path from "the browser proved this is broken" straight back to `CLAIMED_DONE` without the agent actually touching the code again.

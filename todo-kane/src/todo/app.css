@@ -1,0 +1,47 @@
+/* used for things that should be hidden in the ui,
+but useful for people who use screen readers */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.toggle-all {
+    width: 40px !important;
+    height: 60px !important;
+    right: auto !important;
+}
+
+.toggle-all-label {
+    pointer-events: none;
+}
+
+.priority-badge {
+    display: inline-block;
+    margin: 0 15px 10px 60px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.priority-badge.priority-high {
+    background: #b83f45;
+}
+
+.priority-badge.priority-medium {
+    background: #a8a13d;
+}
+
+.priority-badge.priority-low {
+    background: #4a8f4a;
+}

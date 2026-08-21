@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A task card with an explicit High or Low priority shows that same priority value on its badge.","kind":"propagation","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"the task card's stored priority value"}}}

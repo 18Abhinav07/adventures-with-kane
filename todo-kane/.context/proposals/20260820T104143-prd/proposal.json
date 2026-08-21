@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "read_basis": "sha256:df3a8c0724df381aa8382644f1655f45fdab279edc2aa0130d8dd40a1c6bf436",
+  "source": {
+    "source_id": "prd",
+    "source_cid": "sha256:964fe276bb58be0079f4ab5a4a63b4c908da1c1189e9e8cfa510ca867766f6ef"
+  },
+  "use_cases": [
+    {
+      "temp_ref": "n1",
+      "title": "Add a task",
+      "description": "A user adds a new task to the todo list by entering a task title and submitting it with Enter, with the source defining the title input and Enter key submission as the promised creation path.",
+      "summary": "Create a new task from a typed title.",
+      "actors": [
+        "user"
+      ],
+      "value": "Lets users capture a new todo item in the list with minimal effort.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L4-L4",
+        "quote": "User can type a task title and press Enter to add it to the list."
+      },
+      "criteria": [
+        {
+          "text": "A task is added from a typed task title when the user presses Enter.",
+          "cite": {
+            "anchor": "L4-L4",
+            "quote": "User can type a task title and press Enter to add it to the list."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n2",
+      "title": "Complete a task",
+      "description": "A user marks an existing task complete by clicking its checkbox, with completion reflected as the completed task state and a strikethrough presentation called out by the source.",
+      "summary": "Mark an existing task complete.",
+      "actors": [
+        "user"
+      ],
+      "value": "Lets users track which tasks are finished without removing them from the list.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L7-L8",
+        "quote": "User can click a checkbox to mark a task complete"
+      },
+      "criteria": [
+        {
+          "text": "Clicking a checkbox marks a task complete.",
+          "cite": {
+            "anchor": "L7-L8",
+            "quote": "User can click a checkbox to mark a task complete"
+          }
+        },
+        {
+          "text": "Completed tasks use a strikethrough style.",
+          "cite": {
+            "anchor": "L7-L8",
+            "quote": "strikethrough style,"
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n3",
+      "title": "Delete a task",
+      "description": "A user removes an existing task from the todo list by clicking the task's \"x\" control, with the source defining deletion as a direct action on the task card.",
+      "summary": "Remove an existing task from the list.",
+      "actors": [
+        "user"
+      ],
+      "value": "Lets users discard tasks that are no longer needed.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L9-L9",
+        "quote": "click an \"x\" to delete a task."
+      },
+      "criteria": [
+        {
+          "text": "Deleting a task is triggered by clicking an \"x\" control on the task.",
+          "cite": {
+            "anchor": "L9-L9",
+            "quote": "click an \"x\" to delete a task."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n4",
+      "title": "Resume tasks after page reload",
+      "description": "A user returns to the application after a page reload and finds their tasks still present, with the source explicitly promising persistence across reloads via localStorage.",
+      "summary": "Keep tasks available after reloading the page.",
+      "actors": [
+        "user"
+      ],
+      "value": "Prevents task loss and avoids re-entry after a refresh or reopen.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L17-L17",
+        "quote": "Tasks survive a page reload (localStorage)."
+      },
+      "criteria": [
+        {
+          "text": "Tasks survive a page reload.",
+          "cite": {
+            "anchor": "L17-L17",
+            "quote": "Tasks survive a page reload (localStorage)."
+          }
+        },
+        {
+          "text": "Persistence is backed by localStorage.",
+          "cite": {
+            "anchor": "L17-L17",
+            "quote": "Tasks survive a page reload (localStorage)."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n5",
+      "title": "See a task's priority",
+      "description": "A user sees each task card display a small priority badge while the existing card UI, controls, and layout otherwise remain unchanged, with the source specifying High, Medium, and Low values and a default of Medium but no priority-editing flow.",
+      "summary": "View the priority shown on each task card.",
+      "actors": [
+        "user"
+      ],
+      "value": "Helps users distinguish task importance without changing the existing task card interaction model.",
+      "risk": "low",
+      "cite": {
+        "anchor": "L12-L14",
+        "quote": "Add a priority badge to each task card"
+      },
+      "criteria": [
+        {
+          "text": "Each task card shows a small priority badge and the rest of the card UI, controls, and layout stay unchanged.",
+          "cite": {
+            "anchor": "L12-L13",
+            "quote": "Add a priority badge to each task card — the existing card UI, controls,"
+          }
+        },
+        {
+          "text": "Priority values are High, Medium, and Low, and the default is Medium.",
+          "cite": {
+            "anchor": "L13-L14",
+            "quote": "just with a small badge showing High/\nMedium/Low priority somewhere on the card, defaulting to Medium."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    }
+  ]
+}

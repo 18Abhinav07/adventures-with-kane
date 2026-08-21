@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating a task's \"x\" control removes that task from the todo list.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"the task whose \"x\" control was activated remains visible in the todo list"}}}

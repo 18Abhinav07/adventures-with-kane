@@ -1,0 +1,25 @@
+{
+  "commit_id": "f352c440-61cf-4777-acfc-046a9d2e7b2a",
+  "test_id": "de07a1e6-5028-41f8-8c6e-15a75905d330",
+  "testcase_id": "01M0FEJJVRQFZWWQZ8ST9KP2CV",
+  "project_id": "01M0F63YNYNEJSPFD57DFXFTMJ",
+  "folder_id": "01M0F63ZGGDR31K4MPZVY3TP2F",
+  "org_id": "3281823",
+  "session_name": "delete-one-existing-task-by-clicking-its-x-control",
+  "executions": [
+    {
+      "execution_id": "1db508de-c7e7-42eb-b9b2-2de4217303ef",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:27:58.344Z"
+    },
+    {
+      "execution_id": "d15fee96-8ba8-4d17-9a69-b96aaa91f01c",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T12:39:40.976Z"
+    }
+  ]
+}

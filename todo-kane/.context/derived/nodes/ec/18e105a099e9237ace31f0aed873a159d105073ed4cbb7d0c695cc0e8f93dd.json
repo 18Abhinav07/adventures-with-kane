@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"When the user presses Enter after typing a task title, the todo list gains exactly one additional task.","kind":"delta","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":1,"baseline":"number of tasks visible in the todo list before pressing Enter","unit":"task"}}}

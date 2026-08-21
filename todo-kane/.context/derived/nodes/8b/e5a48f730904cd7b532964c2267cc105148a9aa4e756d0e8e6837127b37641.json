@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each task card still exposes its delete \"x\" control.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"task card has a delete \"x\" control"}}}

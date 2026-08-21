@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Clicking an existing task's checkbox changes that task from not completed to completed.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"completed","baseline":"not completed"}}}

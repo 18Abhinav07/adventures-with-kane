@@ -1,0 +1,25 @@
+{
+  "commit_id": "a6e94211-8e4d-4fe8-81f8-ad5c10ad2719",
+  "test_id": "869ee754-e38f-4b36-ae80-745c6c9612a7",
+  "testcase_id": "01M0FEA2903PTWD447R7HYCFWP",
+  "project_id": "01M0F63YNYNEJSPFD57DFXFTMJ",
+  "folder_id": "01M0F63ZGGDR31K4MPZVY3TP2F",
+  "org_id": "3281823",
+  "session_name": "complete-an-existing-task-by-clicking-its-checkbox",
+  "executions": [
+    {
+      "execution_id": "464fcccd-636d-4af6-8f7b-f67356057606",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:22:51.043Z"
+    },
+    {
+      "execution_id": "cb849451-fb0b-4b57-bfc1-4c535e38446c",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T12:39:09.357Z"
+    }
+  ]
+}

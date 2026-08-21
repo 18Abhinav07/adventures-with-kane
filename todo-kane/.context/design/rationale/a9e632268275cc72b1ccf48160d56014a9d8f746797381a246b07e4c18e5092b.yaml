@@ -1,0 +1,9 @@
+anchor: ac-14
+combinatorial:
+  reason: Happy-path scenario for the source-stated default behavior. Kept separate from explicit-value coverage because defaulting to Medium is a distinct outcome from rendering an already-stored explicit value.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Happy-path scenario for the source-stated default behavior. Kept separate from explicit-value coverage because defaulting to Medium is a distinct outcome from rendering an already-stored explicit value.

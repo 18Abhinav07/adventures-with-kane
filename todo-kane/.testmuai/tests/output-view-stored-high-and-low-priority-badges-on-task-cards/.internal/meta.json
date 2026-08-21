@@ -1,0 +1,46 @@
+{
+  "test_id": "7b2cd87c-a17b-4dda-beb7-8414a8fc6205",
+  "project_id": "01M0F63YNYNEJSPFD57DFXFTMJ",
+  "folder_id": "01M0F63ZGGDR31K4MPZVY3TP2F",
+  "org_id": "3281823",
+  "session_name": "view-stored-high-and-low-priority-badges-on-task-cards",
+  "commit_id": "4f45445a-9ad1-4fd4-b897-748c6bde7d46",
+  "testcase_id": "01M0FG1GC8755QJYX5XDKDJEVT",
+  "executions": [
+    {
+      "execution_id": "de4b2032-d8df-4747-b19c-b9896503a248",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:52:24.801Z"
+    },
+    {
+      "execution_id": "dccc6cee-510e-4795-9098-b41701d92ba3",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:55:41.729Z"
+    },
+    {
+      "execution_id": "84fe5ded-f2e5-4271-a1c7-5ab93c5dfccd",
+      "run_kind": "replay",
+      "status": "broken",
+      "valid": true,
+      "at": "2026-08-20T12:34:40.936Z"
+    },
+    {
+      "execution_id": "68eb597e-9ad8-4db3-abcf-c514d837b71f",
+      "run_kind": "replay",
+      "status": "failed",
+      "valid": true,
+      "at": "2026-08-20T12:35:42.284Z"
+    },
+    {
+      "execution_id": "7885634e-a059-4482-a4e7-bfd333d9f4fd",
+      "run_kind": "replay",
+      "status": "broken",
+      "valid": true,
+      "at": "2026-08-20T12:37:47.842Z"
+    }
+  ]
+}

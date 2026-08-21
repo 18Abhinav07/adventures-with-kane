@@ -1,0 +1,9 @@
+anchor: ac-13
+combinatorial:
+  reason: from low-risk, non-money, non-auth, non-data-loss behavior; tool degraded to effective strength=1 because there is only one input. No separate negative path was minted because the corpus does not specify invalid-priority handling or a way to create an invalid value through this use-case.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: inferred'
+profile_family: unspecified
+surface_state: absent
+technique: Equivalence partitioning across the explicit allowed priority values named in the PRD. Covered with covering_array over input stored_priority using requested strength=2 from low-risk, non-money, non-auth, non-data-loss behavior; tool degraded to effective strength=1 because there is only one input. No separate negative path was minted because the corpus does not specify invalid-priority handling or a way to create an invalid value through this use-case.

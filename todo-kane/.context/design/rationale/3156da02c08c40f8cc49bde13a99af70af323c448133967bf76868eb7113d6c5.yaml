@@ -1,0 +1,9 @@
+anchor: ac-1
+combinatorial:
+  reason: 'Applied equivalence partitioning with one representative valid input class: a typed task title. Negative and boundary techniques were reviewed but not minted because the current source does not define blank-title behavior, title limits, or alternate submission outcomes; those remain captured by gaps **gap-2** and **gap-3**. No covering array was needed because this path has one asserted input dimension and one grounded outcome.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Applied equivalence partitioning with one representative valid input class: a typed task title. Negative and boundary techniques were reviewed but not minted because the current source does not define blank-title behavior, title limits, or alternate submission outcomes; those remain captured by gaps **gap-2** and **gap-3**. No covering array was needed because this path has one asserted input dimension and one grounded outcome.'

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each task card displays a visible priority badge.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"task card has a visible priority badge"}}}

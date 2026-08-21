@@ -1,0 +1,32 @@
+{
+  "test_id": "5c791a9b-14d3-4422-8fa4-be3f9a0122b3",
+  "project_id": "01M0F63YNYNEJSPFD57DFXFTMJ",
+  "folder_id": "01M0F63ZGGDR31K4MPZVY3TP2F",
+  "org_id": "3281823",
+  "session_name": "show-medium-badge-for-a-task-with-no-explicit-priority",
+  "commit_id": "816dcc0a-d943-4bca-8035-9be37e5f7322",
+  "testcase_id": "01M0FFM51KE9S9BQTR1MNMC4Z7",
+  "executions": [
+    {
+      "execution_id": "aa5f9a11-ad98-423b-a509-2b647b68f962",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:44:11.229Z"
+    },
+    {
+      "execution_id": "17376e1e-329a-4bc4-bc76-83ef0f6601f1",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:55:01.496Z"
+    },
+    {
+      "execution_id": "8d11c6bd-9b1e-4e8c-8955-ba3ab4c0758c",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T12:38:34.327Z"
+    }
+  ]
+}

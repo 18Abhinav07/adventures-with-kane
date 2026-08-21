@@ -1,0 +1,9 @@
+anchor: ac-6
+combinatorial:
+  reason: Applied equivalence partitioning to sweep representative task-list sizes of 1 and 3 within one outcome-preserving scenario. Applied persistence technique because the source explicitly promises durable task availability after reload. Did not mint boundary, negative, security, a11y, perf, or i18n scenarios because the source states no bounds, invalid-input behavior, access control, rendering rule, timing promise, or locale-specific behavior. Budget ceiling max_pairs=8 did not constrain the 1 candidate scenario.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to sweep representative task-list sizes of 1 and 3 within one outcome-preserving scenario. Applied persistence technique because the source explicitly promises durable task availability after reload. Did not mint boundary, negative, security, a11y, perf, or i18n scenarios because the source states no bounds, invalid-input behavior, access control, rendering rule, timing promise, or locale-specific behavior. Budget ceiling max_pairs=8 did not constrain the 1 candidate scenario.

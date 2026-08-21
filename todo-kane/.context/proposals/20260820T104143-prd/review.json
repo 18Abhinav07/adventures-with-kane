@@ -1,0 +1,57 @@
+[
+  {
+    "id": "n1",
+    "kind": "review-item",
+    "resolution": "skipped",
+    "edit": null,
+    "reason": null,
+    "by": {
+      "kind": "human",
+      "id": "owner"
+    }
+  },
+  {
+    "id": "n2",
+    "kind": "review-item",
+    "resolution": "skipped",
+    "edit": null,
+    "reason": null,
+    "by": {
+      "kind": "human",
+      "id": "owner"
+    }
+  },
+  {
+    "id": "n3",
+    "kind": "review-item",
+    "resolution": "skipped",
+    "edit": null,
+    "reason": null,
+    "by": {
+      "kind": "human",
+      "id": "owner"
+    }
+  },
+  {
+    "id": "n4",
+    "kind": "review-item",
+    "resolution": "skipped",
+    "edit": null,
+    "reason": null,
+    "by": {
+      "kind": "human",
+      "id": "owner"
+    }
+  },
+  {
+    "id": "n5",
+    "kind": "review-item",
+    "resolution": "skipped",
+    "edit": null,
+    "reason": null,
+    "by": {
+      "kind": "human",
+      "id": "owner"
+    }
+  }
+]

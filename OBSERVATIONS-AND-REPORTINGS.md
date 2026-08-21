@@ -58,13 +58,18 @@ Every raw `failed` result in this repo's evidence — not just the passing ones 
 
 ### 2.6 The fix-loop state machine, in practice
 
-```
-PLANNED → IN_PROGRESS → CLAIMED_DONE → KANE_VERIFYING ─┬─→ KANE_VERIFIED
-                              ▲                          │
-                              │                          ├─→ KANE_FAILED (attempts < 3)
-                              └──────────────────────────┘
-                                                          │
-                                                          └─→ BLOCKED_NEEDS_HUMAN (attempts = 3)
+```mermaid
+stateDiagram-v2
+    [*] --> PLANNED
+    PLANNED --> IN_PROGRESS
+    IN_PROGRESS --> CLAIMED_DONE : Claude claims the task finished
+    CLAIMED_DONE --> KANE_VERIFYING : Stop hook fires kane-cli
+    KANE_VERIFYING --> KANE_VERIFIED : test + sweep both clean
+    KANE_VERIFYING --> KANE_FAILED : test or sweep found an issue\n(attempts < 3)
+    KANE_VERIFYING --> BLOCKED_NEEDS_HUMAN : 3rd consecutive failure
+    KANE_FAILED --> IN_PROGRESS : Claude must fix the real code
+    KANE_VERIFIED --> [*]
+    BLOCKED_NEEDS_HUMAN --> [*]
 ```
 
 On ORBITAL specifically, several tasks show this loop actually firing in the tracker's recorded history rather than sailing through on the first try:

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each task visible immediately before the page reload remains visible immediately after the reload.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"Each task visible immediately before the page reload remains visible immediately after the reload.","baseline":null}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"After the user presses Enter on a typed task title, the todo list contains a task whose visible title matches the typed title.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a todo-list item whose visible title equals the title typed before pressing Enter"}}}

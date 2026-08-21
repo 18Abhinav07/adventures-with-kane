@@ -1,0 +1,39 @@
+{
+  "test_id": "81dec1a5-80c9-4481-8292-621d44c62519",
+  "project_id": "01M0F63YNYNEJSPFD57DFXFTMJ",
+  "folder_id": "01M0F63ZGGDR31K4MPZVY3TP2F",
+  "org_id": "3281823",
+  "session_name": "reload-restores-visible-tasks-from-localstorage",
+  "commit_id": "04240adf-22b9-4132-930c-eb247162b726",
+  "testcase_id": "01M0FF6SP5TXFP3HD1FK8HSV53",
+  "executions": [
+    {
+      "execution_id": "b5adde98-a857-44c0-800b-5d95ace594ff",
+      "run_kind": "author",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:39:15.888Z"
+    },
+    {
+      "execution_id": "7572048a-da0c-4aef-9bd1-12c613c343eb",
+      "run_kind": "replay",
+      "status": "passed",
+      "valid": true,
+      "at": "2026-08-20T11:39:54.143Z"
+    },
+    {
+      "execution_id": "b00573c0-3f13-416a-a4c8-06f0b1a38c6a",
+      "run_kind": "replay",
+      "status": "broken",
+      "valid": true,
+      "at": "2026-08-20T12:40:16.526Z"
+    },
+    {
+      "execution_id": "ef417698-6933-4e86-912e-44449e3e80ea",
+      "run_kind": "replay",
+      "status": "broken",
+      "valid": true,
+      "at": "2026-08-20T12:41:11.717Z"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A completed task is displayed with strikethrough styling.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"completed task is rendered with strikethrough styling"}}}

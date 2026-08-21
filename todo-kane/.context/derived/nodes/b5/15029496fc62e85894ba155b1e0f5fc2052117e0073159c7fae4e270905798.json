@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A task card without an explicit priority shows Medium on its badge.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"Medium"}}}
