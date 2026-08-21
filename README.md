@@ -160,6 +160,25 @@ Full task-by-task tracker evidence for ORBITAL — including the sweep-caught ch
 
 **[→ Kane Verification Trail](https://claude.ai/code/artifact/aacb884f-81e3-4ea7-8587-9b62cc2ab9bb)** — a chronological, task-by-task audit of the Stop hook's own activity log for the ORBITAL build: every infra retry, every scripted-test pass/fail, the one real defect the sweep caught (T7) and forced a fix on, and all six human-reviewed overrides with their actual `kane-cli` bug-triage verdicts. Transcribed straight from `orbital-kane/.testmuai/kane-activity.log` (also archived at `docs/demo/kane-audit-trail.html`) — nothing on that page is invented.
 
+### Run any demo app locally
+
+Every experiment is a standalone app in this repo — clone, install, run:
+
+```bash
+cd orbital-kane        # or orbital-baseline / booking-kane / booking-baseline /
+                        # booking-studio-kane / booking-studio-baseline / todo-kane / todo-baseline
+npm install
+npm run dev
+```
+
+| App | Command | Default port |
+|---|---|---|
+| `orbital-kane` / `orbital-baseline` | `npm install && npm run dev` | Vite default (5173) |
+| `booking-kane` / `booking-baseline` / `booking-studio-kane` / `booking-studio-baseline` | `npm install && npm run dev` | Vite default (5173) |
+| `todo-kane` / `todo-baseline` | `npm install && npm run dev` | webpack-dev-server default (8080) |
+
+Running a `-kane` and a `-baseline` pair side by side to compare them live: pass `--port <n>` (webpack apps) or set `vite.config` / `--port <n>` (Vite apps) so the two dev servers don't collide on the same default port.
+
 ---
 
 ## How to use this in any project
