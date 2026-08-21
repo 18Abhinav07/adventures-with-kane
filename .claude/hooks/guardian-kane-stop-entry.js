@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { readTracker, writeTracker } from '../../lib/tracker.js';
 import { runKaneTest, runKaneSweep } from '../../lib/kane.js';
 import { getAppUrl } from '../../lib/config.js';
@@ -33,6 +34,12 @@ function probeReady() {
 let stdin = '';
 process.stdin.on('data', d => stdin += d);
 process.stdin.on('end', () => {
+  // No tracker yet means GuardianKane hasn't been started on this project
+  // (via /guardian-kane start) — let Claude Code stop normally.
+  if (!existsSync(TRACKER_PATH)) {
+    process.stdout.write('{}');
+    process.exit(0);
+  }
   const { tasks } = readTracker(TRACKER_PATH);
   const bugMemory = { memory: loadMemory(), recordBug, findMatches, saveMemory: (m) => saveMemory(m) };
   const result = decide({ tasks }, { probeReady, runKane: runKaneTest, runSweep: runKaneSweep, log: logActivity, bugMemory });
