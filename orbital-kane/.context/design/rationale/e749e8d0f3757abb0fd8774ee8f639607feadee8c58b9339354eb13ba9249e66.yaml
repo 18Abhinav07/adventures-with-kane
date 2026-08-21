@@ -1,0 +1,9 @@
+anchor: ac-70
+combinatorial:
+  reason: by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because the path has one varying input class.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: equivalence partitioning over preview-entry modes, with hover treated as a distinct interaction class from explicit activation. strength=2 by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because the path has one varying input class.'

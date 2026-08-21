@@ -1,0 +1,9 @@
+anchor: ac-52
+combinatorial:
+  reason: Applied equivalence partitioning across allocation segments because the hover affordance is stated once and should behave consistently for every slice. covering_array on asset_class degraded to effective_t=1 from requested strength 2 because only one input existed, so this scenario sweeps Equities, Fixed Income, Alternatives, Cash, and Commodities as equivalent representatives. I did not split a separate center-content scenario because **gap-3** already records that the selected-allocation replacement content is underspecified. Budget ceiling=8 existed; budget_cut kept this scenario as a primary discovery path.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning across allocation segments because the hover affordance is stated once and should behave consistently for every slice. covering_array on asset_class degraded to effective_t=1 from requested strength 2 because only one input existed, so this scenario sweeps Equities, Fixed Income, Alternatives, Cash, and Commodities as equivalent representatives. I did not split a separate center-content scenario because **gap-3** already records that the selected-allocation replacement content is underspecified. Budget ceiling=8 existed; budget_cut kept this scenario as a primary discovery path.

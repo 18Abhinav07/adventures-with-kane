@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating the interactive concentration warning reveals a popover anchored to the warning.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible concentration warning popover anchored to the warning"}}}

@@ -1,0 +1,9 @@
+anchor: ac-10
+combinatorial:
+  reason: Applied the a11y technique because the product requires keyboard operation, visible focus, and accessible headings on rendered surfaces. Chose one representative keyboard-driven context change because the behavior outcome matches pointer-driven activation across items. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies; no covering array was needed.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied the a11y technique because the product requires keyboard operation, visible focus, and accessible headings on rendered surfaces. Chose one representative keyboard-driven context change because the behavior outcome matches pointer-driven activation across items. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies; no covering array was needed.

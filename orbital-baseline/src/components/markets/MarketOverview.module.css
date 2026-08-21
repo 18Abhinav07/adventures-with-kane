@@ -1,0 +1,79 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: var(--space-4);
+  height: 52px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background var(--dur-micro) var(--ease-standard);
+}
+
+.row:hover {
+  background: var(--color-surface-secondary);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.symbol {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.name {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sparkWrap {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -10px;
+  transform: scale(1);
+  transition: transform var(--dur-micro) var(--ease-standard);
+  transform-origin: center;
+}
+
+.row:hover .sparkWrap {
+  transform: scale(1.2);
+}
+
+.figures {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.value {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.positive {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-positive);
+}
+
+.negative {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-negative);
+}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"When focused, the global search field width remains 420px.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"420px"}}}

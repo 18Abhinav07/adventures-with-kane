@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"After another alert is opened, the newly opened alert remains expanded inline.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"newly opened alert expanded inline","baseline":"a different alert expanded"}}}

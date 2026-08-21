@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The risk monitor displays Sharpe as 1.74.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a risk metric labeled \"Sharpe\" with displayed value \"1.74\""}}}

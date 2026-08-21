@@ -1,0 +1,9 @@
+anchor: ac-87
+combinatorial:
+  reason: Applied state/flow to the open-to-dismiss transition and equivalence partitioning to keep outside-click dismissal distinct from keyboard dismissal because the source named it as a separate close mechanism. No covering array was needed; risk-judged combinatorial strength remained 2 (no money, auth, or data-loss factors applied to the grounded behavior).
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state/flow to the open-to-dismiss transition and equivalence partitioning to keep outside-click dismissal distinct from keyboard dismissal because the source named it as a separate close mechanism. No covering array was needed; risk-judged combinatorial strength remained 2 (no money, auth, or data-loss factors applied to the grounded behavior).

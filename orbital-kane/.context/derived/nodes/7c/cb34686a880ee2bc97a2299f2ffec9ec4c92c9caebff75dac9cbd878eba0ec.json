@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The recent activity table shows exactly these column headers: TIME, TYPE, DESCRIPTION, ASSET, VALUE, and STATUS.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":["TIME","TYPE","DESCRIPTION","ASSET","VALUE","STATUS"]}}}

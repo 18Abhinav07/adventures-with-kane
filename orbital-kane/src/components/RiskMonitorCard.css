@@ -1,0 +1,122 @@
+.risk-monitor-card {
+  background: var(--secondary-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.risk-monitor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-monitor-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.risk-gauge {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-gauge-legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--muted-text);
+}
+
+.risk-gauge-track {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--positive), var(--warning), var(--negative));
+}
+
+.risk-gauge-marker {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 12px;
+  background: var(--primary-text);
+  transform: translateX(-1px);
+}
+
+.risk-gauge-readout {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.risk-gauge-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.risk-gauge-status {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--warning);
+}
+
+.risk-metrics {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.risk-metric {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.risk-metric-label {
+  font-size: 11px;
+  color: var(--secondary-text);
+}
+
+.risk-metric-value {
+  font-size: 12px;
+  color: var(--primary-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.risk-metric-value.negative {
+  color: var(--negative);
+}
+
+.risk-warning-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+  background: rgba(233, 185, 73, 0.1);
+  border: 1px solid var(--warning);
+  border-radius: 6px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.risk-warning-headline {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--warning);
+}
+
+.risk-warning-detail {
+  font-size: 11px;
+  color: var(--secondary-text);
+}

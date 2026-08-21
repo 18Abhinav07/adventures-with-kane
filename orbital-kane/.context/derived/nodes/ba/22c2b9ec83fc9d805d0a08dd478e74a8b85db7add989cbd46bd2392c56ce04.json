@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a chart point updates the displayed portfolio value.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"displayed portfolio value","baseline":"displayed portfolio value before hover"}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Opening a different alert collapses the previously expanded alert.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"previously expanded alert collapsed while the newly opened alert is expanded","baseline":"a different alert expanded"}}}

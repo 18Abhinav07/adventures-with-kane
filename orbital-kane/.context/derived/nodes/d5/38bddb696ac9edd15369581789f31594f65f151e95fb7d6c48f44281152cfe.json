@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"CSV is selected by default as the export format.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"CSV"}}}

@@ -1,0 +1,74 @@
+.activity-card {
+  background: var(--secondary-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.activity-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-card-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-table th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-table td {
+  padding: 10px;
+  font-size: 12px;
+  color: var(--primary-text);
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-table tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-time,
+.activity-value {
+  color: var(--secondary-text);
+}
+
+.activity-status-pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.activity-status-pill.completed {
+  color: var(--positive);
+  background: rgba(53, 201, 138, 0.12);
+}
+
+.activity-status-pill.open {
+  color: var(--warning);
+  background: rgba(233, 185, 73, 0.12);
+}

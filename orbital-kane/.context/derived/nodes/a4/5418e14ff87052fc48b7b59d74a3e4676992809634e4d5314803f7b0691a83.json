@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"If JSON is selected as the target format, JSON is the selected export format when the export action is queued.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"JSON"}}}

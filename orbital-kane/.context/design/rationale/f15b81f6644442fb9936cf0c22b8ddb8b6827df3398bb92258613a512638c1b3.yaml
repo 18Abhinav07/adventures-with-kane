@@ -1,0 +1,9 @@
+anchor: ac-97
+combinatorial:
+  reason: Applied state/flow reasoning to compare the pre-hover and hover states of the same row, focused on visual stability promises that often regress during UI styling changes. Negative and boundary techniques were not applicable because the source defines one hover behavior, not an input range or failure path. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state/flow reasoning to compare the pre-hover and hover states of the same row, focused on visual stability promises that often regress during UI styling changes. Negative and boundary techniques were not applicable because the source defines one hover behavior, not an input range or failure path. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a chart point updates the displayed return.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"displayed return","baseline":"displayed return before hover"}}}

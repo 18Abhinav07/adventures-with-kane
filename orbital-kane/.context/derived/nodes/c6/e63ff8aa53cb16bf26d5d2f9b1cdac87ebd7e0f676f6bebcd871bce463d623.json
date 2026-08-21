@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The alerts panel includes an alert titled \"Technology concentration above target\".","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"alert titled \"Technology concentration above target\""}}}

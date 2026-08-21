@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The profile popover displays the current status label and value.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"exists","operand":"Status label and the current status value are visible in the profile popover"}}}

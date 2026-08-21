@@ -1,0 +1,9 @@
+anchor: ac-151
+combinatorial:
+  reason: Applied auth to the signed-in profile surface. Strength=3 because auth risk applies. No equivalence-class, boundary-value, or covering-array expansion was needed because the source fixed one display state and named no variable inputs or alternate outcomes.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: inferred'
+profile_family: unspecified
+surface_state: absent
+technique: Applied auth to the signed-in profile surface. Strength=3 because auth risk applies. No equivalence-class, boundary-value, or covering-array expansion was needed because the source fixed one display state and named no variable inputs or alternate outcomes.

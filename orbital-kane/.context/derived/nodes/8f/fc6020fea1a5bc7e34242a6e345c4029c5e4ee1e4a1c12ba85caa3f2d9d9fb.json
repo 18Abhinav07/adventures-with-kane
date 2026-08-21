@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The performance chart renders a y-axis.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"y-axis"}}}

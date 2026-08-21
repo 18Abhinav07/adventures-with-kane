@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Disabling Grid removes grid lines from the performance chart.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"performance chart grid lines"}}}

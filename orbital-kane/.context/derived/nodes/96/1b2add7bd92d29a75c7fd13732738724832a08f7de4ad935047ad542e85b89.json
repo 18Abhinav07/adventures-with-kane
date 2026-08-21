@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"When the global search field receives focus, a focus ring is shown.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"exists","operand":"visible focus ring around the focused global search field"}}}

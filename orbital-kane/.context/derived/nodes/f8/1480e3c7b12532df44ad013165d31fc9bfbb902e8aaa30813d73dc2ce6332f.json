@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating OPEN SECURITY from the preview opens an in-page security modal.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"security modal open","baseline":"security modal closed"}}}

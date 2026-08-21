@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The holdings table includes the column headers ASSET, PRICE, DAY, POSITION, WEIGHT, and P&L.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":["ASSET","PRICE","DAY","POSITION","WEIGHT","P&L"]}}}

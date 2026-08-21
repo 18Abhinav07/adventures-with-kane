@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Opening a ticker preview must not change the holdings page layout.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"any holdings-page reflow when the preview popover opens, including row height or page width changes"}}}

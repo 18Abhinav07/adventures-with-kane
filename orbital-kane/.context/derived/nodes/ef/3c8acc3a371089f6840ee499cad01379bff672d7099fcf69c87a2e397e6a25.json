@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a segment highlights the matching legend item.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"the legend item matching the hovered segment is highlighted"}}}

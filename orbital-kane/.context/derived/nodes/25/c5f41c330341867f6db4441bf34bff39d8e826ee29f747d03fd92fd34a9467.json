@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each legend entry shows an asset class.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"each legend entry includes an asset class label"}}}

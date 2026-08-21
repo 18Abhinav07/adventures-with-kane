@@ -1,0 +1,9 @@
+anchor: ac-144
+combinatorial:
+  reason: 'Techniques: a11y + state / flow. The accessibility requirements and keyboard requirements apply to all functionality and explicitly require keyboard operation, visible focus, and non-hover-exclusive interaction, so Customize controls need a dedicated keyboard path. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: a11y + state / flow. The accessibility requirements and keyboard requirements apply to all functionality and explicitly require keyboard operation, visible focus, and non-hover-exclusive interaction, so Customize controls need a dedicated keyboard path. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'

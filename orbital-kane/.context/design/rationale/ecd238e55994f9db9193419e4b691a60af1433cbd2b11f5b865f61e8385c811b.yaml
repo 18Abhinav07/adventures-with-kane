@@ -1,0 +1,9 @@
+anchor: ac-101
+combinatorial:
+  reason: Applied state / flow because the source defines a before-and-after interaction across sequential alert openings. Applied boundary value analysis to the explicit expansion-count limit of at most one alert at a time; the relevant observable boundary states are 1 expanded alert and the attempted transition to 2, which must resolve back to 1 by collapsing the previous alert. No combinatorial covering array was needed because this path varies one interaction dimension rather than multiple independent inputs.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state / flow because the source defines a before-and-after interaction across sequential alert openings. Applied boundary value analysis to the explicit expansion-count limit of at most one alert at a time; the relevant observable boundary states are 1 expanded alert and the attempted transition to 2, which must resolve back to 1 by collapsing the previous alert. No combinatorial covering array was needed because this path varies one interaction dimension rather than multiple independent inputs.

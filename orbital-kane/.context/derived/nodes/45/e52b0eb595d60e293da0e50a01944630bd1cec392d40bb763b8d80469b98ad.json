@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A second click on the locked chart point unlocks the selection.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"no locked chart-point selection","baseline":"locked chart-point selection after the first click"}}}

@@ -1,0 +1,9 @@
+anchor: ac-127
+combinatorial:
+  reason: Applied equivalence partitioning across the four export actions with the PDF format fixed, because the source promised the same success-feedback outcome regardless of the chosen export action. Used covering-array authority over input classes {action}; requested strength 2 from the user-reach-only risk profile and accepted the tool's degradation to strength 1 because only one varying input remained after fixing format to PDF. Kept this separate from the CSV path because changing away from the default creates a distinct journey that must prove the non-default format can be selected before export. Skipped boundary, negative, state-flow, auth, persistence, i18n, a11y, responsiveness, and pagination for the same evidence-based reasons as the other export paths. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning across the four export actions with the PDF format fixed, because the source promised the same success-feedback outcome regardless of the chosen export action. Used covering-array authority over input classes {action}; requested strength 2 from the user-reach-only risk profile and accepted the tool's degradation to strength 1 because only one varying input remained after fixing format to PDF. Kept this separate from the CSV path because changing away from the default creates a distinct journey that must prove the non-default format can be selected before export. Skipped boundary, negative, state-flow, auth, persistence, i18n, a11y, responsiveness, and pagination for the same evidence-based reasons as the other export paths. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.

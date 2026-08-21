@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"CSV, JSON, and PDF are present as export format options.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"the format options include CSV, JSON, and PDF"}}}

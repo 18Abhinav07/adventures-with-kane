@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each legend entry shows a value.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"each legend entry includes a value"}}}

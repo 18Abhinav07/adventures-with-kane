@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A section disabled in Customize is not shown on the dashboard.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"the dashboard section whose visibility toggle was just turned off"}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"After a section is disabled, the surrounding dashboard layout reflows without leaving the removed section's slot empty.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"an empty dashboard slot where the disabled section had been"}}}

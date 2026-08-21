@@ -1,0 +1,9 @@
+anchor: ac-164
+combinatorial:
+  reason: Applied equivalence partitioning because direct focus is a distinct entry path into the field. Applied state/flow because the path compares unfocused and focused field states. Applied responsiveness/layout-stability reasoning because the PRD promises the field remains visually stable when focused. Boundary value analysis was not applicable because the PRD gives fixed dimensions, not an input range. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because there are no combinable variable inputs for this path.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning because direct focus is a distinct entry path into the field. Applied state/flow because the path compares unfocused and focused field states. Applied responsiveness/layout-stability reasoning because the PRD promises the field remains visually stable when focused. Boundary value analysis was not applicable because the PRD gives fixed dimensions, not an input range. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because there are no combinable variable inputs for this path.

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"While a chart point is locked, a lock icon appears.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"lock icon"}}}

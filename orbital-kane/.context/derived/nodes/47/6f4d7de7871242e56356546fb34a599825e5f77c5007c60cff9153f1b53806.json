@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a market row does not change that row's height.","kind":"delta","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","baseline":"row height before hover","operand":0,"unit":"px"}}}

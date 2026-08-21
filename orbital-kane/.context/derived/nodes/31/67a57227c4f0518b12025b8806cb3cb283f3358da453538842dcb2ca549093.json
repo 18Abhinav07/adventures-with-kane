@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The risk gauge legend presents the states LOW, MODERATE, and HIGH.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a risk gauge legend showing the states LOW, MODERATE, and HIGH"}}}

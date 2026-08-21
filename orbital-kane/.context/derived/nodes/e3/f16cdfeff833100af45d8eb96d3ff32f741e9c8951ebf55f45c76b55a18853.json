@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The holdings table includes the eight named holdings: AAPL, MSFT, NVDA, AMZN, GOOGL, META, JPM, and XOM.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":["AAPL","MSFT","NVDA","AMZN","GOOGL","META","JPM","XOM"]}}}

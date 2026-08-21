@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Customize controls do not require hover to be focused or activated.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a Customize control that only becomes focusable or operable on hover"}}}

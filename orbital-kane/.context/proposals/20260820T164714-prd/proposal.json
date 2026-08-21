@@ -1,0 +1,796 @@
+{
+  "version": 1,
+  "read_basis": "sha256:6c1acbc4f2c5496a4da632547cb60b80865395ee2f0a5b07a6439707ee33f73b",
+  "source": {
+    "source_id": "prd",
+    "source_cid": "sha256:f3e96f7712d24aeb184358bc34c8c801123e04052e6fc4ccac0e2668f5df7aa5"
+  },
+  "use_cases": [
+    {
+      "temp_ref": "n1",
+      "title": "Monitor portfolio performance",
+      "description": "An investment professional reviews the portfolio overview, compares portfolio performance against the benchmark, switches among defined time ranges, inspects hovered data points in a custom tooltip, and locks or clears a selected chart point while keeping summary-card values anchored to the dashboard summary rather than transient hover state.",
+      "summary": "Review portfolio performance over selectable periods",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Provides a fast view of portfolio value, return, and benchmark-relative performance across supported periods.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L500-L509",
+        "quote": "Changing the value must update:"
+      },
+      "cites": [
+        {
+          "anchor": "L500-L509",
+          "quote": "Changing the value must update:"
+        },
+        {
+          "anchor": "L635-L655",
+          "quote": "Portfolio Performance"
+        },
+        {
+          "anchor": "L681-L683",
+          "quote": "Tooltip appears on hover."
+        },
+        {
+          "anchor": "L698-L710",
+          "quote": "Clicking a chart point locks the selection."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Time range options are 1D, 1W, 1M, 3M, YTD, 1Y, and ALL.",
+          "cite": {
+            "anchor": "L474-L480",
+            "quote": "1D\n1W\n1M\n3M\nYTD\n1Y\nALL"
+          }
+        },
+        {
+          "text": "The default time range is 1M.",
+          "cite": {
+            "anchor": "L483-L486",
+            "quote": "1M"
+          }
+        },
+        {
+          "text": "Exactly one time-range value is active, and changing it updates the performance chart data range, visible x-axis labels, and displayed period comparison.",
+          "cite": {
+            "anchor": "L500-L509",
+            "quote": "Exactly one value is active."
+          }
+        },
+        {
+          "text": "The performance chart includes portfolio and benchmark lines, horizontal grid, axes, a custom tooltip, an active point indicator, and portfolio area fill; it must not use a default library tooltip.",
+          "cite": {
+            "anchor": "L644-L655",
+            "quote": "The chart must not rely on a default browser/graph-library tooltip."
+          }
+        },
+        {
+          "text": "Hovering updates the date, portfolio value, benchmark value, and return, but must not modify summary-card data.",
+          "cite": {
+            "anchor": "L689-L696",
+            "quote": "Hovering updates:"
+          }
+        },
+        {
+          "text": "Clicking a chart point locks selection, a second click unlocks it, Escape clears the lock, and changing time range clears the selected point.",
+          "cite": {
+            "anchor": "L698-L710",
+            "quote": "Changing time range clears the selected point."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n2",
+      "title": "Review holdings and inspect securities",
+      "description": "An investment professional reviews the top holdings table with asset, pricing, position, weight, and P&L context, opens a preview popover from a ticker without reflowing the page, and drills into an in-page security modal for deeper pricing, fundamentals, analyst consensus, and news details.",
+      "summary": "Inspect holdings and open detailed security views",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Connects portfolio positions to security-level context without leaving the dashboard.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L768-L775",
+        "quote": "Top Holdings"
+      },
+      "cites": [
+        {
+          "anchor": "L768-L775",
+          "quote": "Top Holdings"
+        },
+        {
+          "anchor": "L823-L823",
+          "quote": "Hovering or explicitly activating a ticker opens a small preview popover."
+        },
+        {
+          "anchor": "L855-L855",
+          "quote": "Clicking `OPEN SECURITY` opens an in-page modal."
+        },
+        {
+          "anchor": "L899-L899",
+          "quote": "Clicking modal body does not close it."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "The top-holdings list contains AAPL, MSFT, NVDA, AMZN, GOOGL, META, JPM, and XOM.",
+          "cite": {
+            "anchor": "L780-L787",
+            "quote": "AAPL\nMSFT\nNVDA\nAMZN\nGOOGL\nMETA\nJPM\nXOM"
+          }
+        },
+        {
+          "text": "Holdings columns are ASSET, PRICE, DAY, POSITION, WEIGHT, and P&L.",
+          "cite": {
+            "anchor": "L793-L798",
+            "quote": "ASSET\nPRICE\nDAY\nPOSITION\nWEIGHT\nP&L"
+          }
+        },
+        {
+          "text": "A security preview popover opens on hover or explicit ticker activation and shows ticker, company name, price, daily move, Market Cap, P/E, 52W range, and OPEN SECURITY.",
+          "cite": {
+            "anchor": "L828-L845",
+            "quote": "NVDA\nNVIDIA CORPORATION\n\n$181.92\n\n+3.14%\n\nMarket Cap\n$4.42T\n\nP/E\n54.18\n\n52W\n$95.14 — $184.49\n\nOPEN SECURITY →"
+          }
+        },
+        {
+          "text": "The preview popover must not cause page reflow.",
+          "cite": {
+            "anchor": "L847-L847",
+            "quote": "Popover must not cause page reflow."
+          }
+        },
+        {
+          "text": "The security modal shows security name, ticker, price, daily move, chart, fundamentals, analyst consensus, and recent news.",
+          "cite": {
+            "anchor": "L869-L879",
+            "quote": "Modal contents:"
+          }
+        },
+        {
+          "text": "The security modal closes by Escape, close button, or backdrop click, and clicking inside the modal body does not close it.",
+          "cite": {
+            "anchor": "L893-L899",
+            "quote": "Clicking modal body does not close it."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n3",
+      "title": "Monitor portfolio risk and concentration warnings",
+      "description": "An investment professional reviews the portfolio’s risk metrics and gauge, sees whether overall risk is low, moderate, or high, and investigates an interactive concentration warning to understand current allocation, target, deviation, and the recommended follow-up action.",
+      "summary": "Review portfolio risk status and investigate warnings",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Surfaces portfolio risk exposure and highlights actionable concentration issues.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L908-L908",
+        "quote": "Portfolio Risk"
+      },
+      "cites": [
+        {
+          "anchor": "L908-L908",
+          "quote": "Portfolio Risk"
+        },
+        {
+          "anchor": "L943-L945",
+          "quote": "Risk concentration detected\nTechnology exposure exceeds target by 4.2%"
+        },
+        {
+          "anchor": "L947-L947",
+          "quote": "Warning is interactive."
+        },
+        {
+          "anchor": "L967-L968",
+          "quote": "Review sector concentration."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Risk metrics include Volatility, Sharpe, Beta, Max Drawdown, and VaR 95% with displayed values.",
+          "cite": {
+            "anchor": "L914-L918",
+            "quote": "Volatility      14.82%\nSharpe           1.74\nBeta             0.93\nMax Drawdown    -6.21%\nVaR 95%          -2.48%"
+          }
+        },
+        {
+          "text": "The risk gauge presents LOW, MODERATE, and HIGH states, with a current value of 61 and status MODERATE.",
+          "cite": {
+            "anchor": "L924-L937",
+            "quote": "LOW ───── MODERATE ───── HIGH\n                ▲"
+          }
+        },
+        {
+          "text": "The dashboard shows an interactive warning when technology exposure exceeds target by 4.2%.",
+          "cite": {
+            "anchor": "L943-L947",
+            "quote": "Warning is interactive."
+          }
+        },
+        {
+          "text": "The warning popover shows Current allocation 31.7%, Target 27.5%, Deviation +4.2%, and the recommended action to review sector concentration.",
+          "cite": {
+            "anchor": "L956-L968",
+            "quote": "TECHNOLOGY OVERWEIGHT\n\nCurrent allocation\n31.7%\n\nTarget\n27.5%\n\nDeviation\n+4.2%\n\nRecommended action\nReview sector concentration."
+          }
+        },
+        {
+          "text": "The warning popover closes when clicking elsewhere or pressing Escape.",
+          "cite": {
+            "anchor": "L973-L976",
+            "quote": "* clicking elsewhere\n* Escape"
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n4",
+      "title": "Analyze portfolio allocation",
+      "description": "An investment professional reviews how the portfolio is distributed across asset classes, uses the donut chart and legend to compare percentages and values, and focuses on a selected allocation by hovering or locking a segment until the chart or time-range context changes.",
+      "summary": "Review asset-allocation breakdown",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Shows portfolio composition and helps the user focus on individual allocation slices.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L716-L716",
+        "quote": "Display a donut chart."
+      },
+      "cites": [
+        {
+          "anchor": "L716-L716",
+          "quote": "Display a donut chart."
+        },
+        {
+          "anchor": "L721-L725",
+          "quote": "Equities       48%\nFixed Income   24%\nAlternatives   13%\nCash            9%\nCommodities     6%"
+        },
+        {
+          "anchor": "L743-L748",
+          "quote": "Hovering segment:"
+        },
+        {
+          "anchor": "L755-L759",
+          "quote": "Changing chart/time-range context clears selection."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Allocation slices are Equities 48%, Fixed Income 24%, Alternatives 13%, Cash 9%, and Commodities 6%.",
+          "cite": {
+            "anchor": "L721-L725",
+            "quote": "Equities       48%\nFixed Income   24%\nAlternatives   13%\nCash            9%\nCommodities     6%"
+          }
+        },
+        {
+          "text": "The chart center shows $24.8M TOTAL and the legend shows asset class, percentage, and value.",
+          "cite": {
+            "anchor": "L731-L740",
+            "quote": "$24.8M\nTOTAL"
+          }
+        },
+        {
+          "text": "Hovering a segment expands it by 4px, highlights the matching legend item, and replaces the center label with the selected allocation.",
+          "cite": {
+            "anchor": "L743-L748",
+            "quote": "* expand segment 4px\n* highlight matching legend item\n* replace center label with selected allocation"
+          }
+        },
+        {
+          "text": "Clicking locks a segment, clicking the same segment again unlocks it, and changing chart or time-range context clears selection.",
+          "cite": {
+            "anchor": "L755-L759",
+            "quote": "Click same segment again to unlock."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n5",
+      "title": "Review and expand portfolio alerts",
+      "description": "An investment professional scans portfolio and market-relevant alerts by severity, expands a single alert inline to inspect more detail, and shifts focus between alerts without turning the list into a modal interaction or leaving more than one alert expanded at once.",
+      "summary": "Review alert feed and expand one alert at a time",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Keeps the user aware of urgent events and lets them inspect one actionable alert at a time.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L1023-L1027",
+        "quote": "Technology concentration above target\nNVDA crossed 52-week high\nPortfolio volatility increased 7.2%\nFed rate decision tomorrow\nCash position below tactical minimum"
+      },
+      "cites": [
+        {
+          "anchor": "L1023-L1027",
+          "quote": "Technology concentration above target\nNVDA crossed 52-week high\nPortfolio volatility increased 7.2%\nFed rate decision tomorrow\nCash position below tactical minimum"
+        },
+        {
+          "anchor": "L1040-L1042",
+          "quote": "critical\nwarning\ninfo"
+        },
+        {
+          "anchor": "L1045-L1045",
+          "quote": "Clicking an alert expands content inline."
+        },
+        {
+          "anchor": "L1047-L1051",
+          "quote": "Only one alert may be expanded at once."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "The alerts panel includes Technology concentration above target, NVDA crossed 52-week high, Portfolio volatility increased 7.2%, Fed rate decision tomorrow, and Cash position below tactical minimum.",
+          "cite": {
+            "anchor": "L1023-L1027",
+            "quote": "Technology concentration above target\nNVDA crossed 52-week high\nPortfolio volatility increased 7.2%\nFed rate decision tomorrow\nCash position below tactical minimum"
+          }
+        },
+        {
+          "text": "Alert severities are critical, warning, and info.",
+          "cite": {
+            "anchor": "L1040-L1042",
+            "quote": "critical\nwarning\ninfo"
+          }
+        },
+        {
+          "text": "Each alert includes severity, title, timestamp, and a dismiss control where applicable.",
+          "cite": {
+            "anchor": "L1030-L1035",
+            "quote": "* severity\n* title\n* timestamp\n* dismiss control where applicable"
+          }
+        },
+        {
+          "text": "Clicking an alert expands it inline, only one alert may be expanded at once, and opening another collapses the previous one.",
+          "cite": {
+            "anchor": "L1045-L1049",
+            "quote": "Opening another collapses the previous alert."
+          }
+        },
+        {
+          "text": "The alert list must not become a modal.",
+          "cite": {
+            "anchor": "L1051-L1051",
+            "quote": "The alert list itself must not become a modal."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n6",
+      "title": "Customize dashboard layout and chart display",
+      "description": "An investment professional opens the customization drawer to change display density, show or hide major dashboard sections, and turn chart options on or off, with the expectation that the visible layout, benchmark line, grid, and hover indicators actually update and reflow in place.",
+      "summary": "Adjust dashboard density, sections, and chart options",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Lets the user tailor information density and visible workspace content without leaving the page.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L1133-L1135",
+        "quote": "A right-side drawer opens."
+      },
+      "cites": [
+        {
+          "anchor": "L1133-L1135",
+          "quote": "A right-side drawer opens."
+        },
+        {
+          "anchor": "L1174-L1174",
+          "quote": "These controls must actually affect the interface."
+        },
+        {
+          "anchor": "L1176-L1178",
+          "quote": "Disabling a section removes the section and surrounding layout must reflow."
+        },
+        {
+          "anchor": "L1180-L1182",
+          "quote": "Disabling Grid removes chart grid."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Display density options are Compact, Comfortable, and Spacious, with Comfortable selected by default.",
+          "cite": {
+            "anchor": "L1146-L1150",
+            "quote": "DISPLAY DENSITY\n\n○ Compact\n● Comfortable\n○ Spacious"
+          }
+        },
+        {
+          "text": "Visible-section toggles cover Portfolio Summary, Performance, Allocation, Holdings, Risk, Market Overview, Alerts, and Activity.",
+          "cite": {
+            "anchor": "L1156-L1163",
+            "quote": "☑ Portfolio Summary\n☑ Performance\n☑ Allocation\n☑ Holdings\n☑ Risk\n☑ Market Overview\n☑ Alerts\n☑ Activity"
+          }
+        },
+        {
+          "text": "Chart options are Benchmark, Grid, and Hover Indicators.",
+          "cite": {
+            "anchor": "L1169-L1171",
+            "quote": "☑ Benchmark\n☑ Grid\n☑ Hover Indicators"
+          }
+        },
+        {
+          "text": "Disabling a section removes that section and the surrounding layout reflows automatically.",
+          "cite": {
+            "anchor": "L1176-L1176",
+            "quote": "Disabling a section removes the section and surrounding layout must reflow."
+          }
+        },
+        {
+          "text": "Disabling Benchmark removes the benchmark line and related legend element, disabling Grid removes the chart grid, and disabling Hover Indicators removes active hover marker behavior.",
+          "cite": {
+            "anchor": "L1178-L1182",
+            "quote": "Disabling Hover Indicators removes the active hover marker behavior."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n7",
+      "title": "Navigate dashboard contexts",
+      "description": "An investment professional moves among the dashboard’s portfolio, analytics, research, and system contexts through the fixed sidebar, changes the active state and page heading without routing to another page or URL, and stays within the single-page terminal while contextual content updates in place.",
+      "summary": "Switch dashboard context within the single-page workspace",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Keeps navigation fast and contained while exposing all major dashboard areas from one shell.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L23-L30",
+        "quote": "The entire experience must be a **single page**."
+      },
+      "cites": [
+        {
+          "anchor": "L23-L30",
+          "quote": "The entire experience must be a **single page**."
+        },
+        {
+          "anchor": "L32-L34",
+          "quote": "Sidebar items may alter active navigation state or contextual content, but the application remains within the same page."
+        },
+        {
+          "anchor": "L451-L454",
+          "quote": "Clicking an item changes active state and contextual page heading."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Navigation stays within one page: there is no application routing, separate dashboard pages, URL navigation, or multi-page workflow.",
+          "cite": {
+            "anchor": "L27-L30",
+            "quote": "* no application routing\n* no separate dashboard pages\n* no navigation to another URL\n* no multi-page workflow"
+          }
+        },
+        {
+          "text": "Primary navigation items are Overview, Portfolio, Markets, Watchlist, and Transactions.",
+          "cite": {
+            "anchor": "L378-L382",
+            "quote": "Overview\nPortfolio\nMarkets\nWatchlist\nTransactions"
+          }
+        },
+        {
+          "text": "Analytics items are Performance, Risk, Attribution, and Scenarios.",
+          "cite": {
+            "anchor": "L388-L391",
+            "quote": "Performance\nRisk\nAttribution\nScenarios"
+          }
+        },
+        {
+          "text": "Research items are Research Notes, Saved Views, and Reports.",
+          "cite": {
+            "anchor": "L397-L399",
+            "quote": "Research Notes\nSaved Views\nReports"
+          }
+        },
+        {
+          "text": "System items are Alerts and Data Health.",
+          "cite": {
+            "anchor": "L405-L406",
+            "quote": "Alerts\nData Health"
+          }
+        },
+        {
+          "text": "Overview is selected by default, and clicking a sidebar item changes active state and contextual page heading without routing away.",
+          "cite": {
+            "anchor": "L418-L454",
+            "quote": "Sidebar navigation does not route away."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n8",
+      "title": "Review market instruments",
+      "description": "An investment professional watches a compact market overview for key instruments, compares current values and daily percentage changes, and uses deterministic sparklines and hover emphasis to inspect movement without disrupting row sizing or neighboring content.",
+      "summary": "Monitor key market instruments",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Provides quick external market context alongside portfolio-specific information.",
+      "risk": "med",
+      "cite": {
+        "anchor": "L982-L989",
+        "quote": "S&P 500\nNASDAQ\nDOW\nBTC/USD"
+      },
+      "cites": [
+        {
+          "anchor": "L982-L989",
+          "quote": "S&P 500\nNASDAQ\nDOW\nBTC/USD"
+        },
+        {
+          "anchor": "L991-L996",
+          "quote": "* instrument\n* value\n* daily percentage\n* sparkline"
+        },
+        {
+          "anchor": "L1009-L1014",
+          "quote": "* must not change row height\n* must not move neighboring content"
+        }
+      ],
+      "criteria": [
+        {
+          "text": "The market overview tracks S&P 500, NASDAQ, DOW, and BTC/USD.",
+          "cite": {
+            "anchor": "L985-L988",
+            "quote": "S&P 500\nNASDAQ\nDOW\nBTC/USD"
+          }
+        },
+        {
+          "text": "Each market row includes instrument, value, daily percentage, and sparkline.",
+          "cite": {
+            "anchor": "L993-L996",
+            "quote": "* instrument\n* value\n* daily percentage\n* sparkline"
+          }
+        },
+        {
+          "text": "Sparklines use deterministic mock data.",
+          "cite": {
+            "anchor": "L1007-L1007",
+            "quote": "Sparklines use deterministic mock data."
+          }
+        },
+        {
+          "text": "Hovering emphasizes the row and subtly enlarges the sparkline region without changing row height or moving neighboring content.",
+          "cite": {
+            "anchor": "L1009-L1014",
+            "quote": "* emphasizes row\n* subtly enlarges sparkline region\n* must not change row height\n* must not move neighboring content"
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n9",
+      "title": "Review recent portfolio activity",
+      "description": "An investment professional reviews a recent-activity feed of portfolio events, scans timestamps, event types, assets, values, and statuses, and uses the table as a compact chronological record of trading, alerts, dividends, and rebalancing actions.",
+      "summary": "Review the recent activity feed",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Shows the latest portfolio and system events in a single timeline-oriented table.",
+      "risk": "low",
+      "cite": {
+        "anchor": "L1062-L1068",
+        "quote": "TIME\nTYPE\nDESCRIPTION\nASSET\nVALUE\nSTATUS"
+      },
+      "cites": [
+        {
+          "anchor": "L1062-L1068",
+          "quote": "TIME\nTYPE\nDESCRIPTION\nASSET\nVALUE\nSTATUS"
+        },
+        {
+          "anchor": "L1073-L1077",
+          "quote": "14:31:09  BUY        Increased NVDA position       NVDA  $42,100   COMPLETED\n13:58:41  SELL       Reduced XOM exposure           XOM   $18,400   COMPLETED\n13:27:12  ALERT      Risk threshold triggered      TECH  —         OPEN\n12:49:08  DIVIDEND   AAPL dividend received        AAPL  $1,284    COMPLETED\n11:04:22  REBALANCE  Sector allocation adjusted    TECH  $72,300   COMPLETED"
+        },
+        {
+          "anchor": "L1080-L1080",
+          "quote": "Statuses use compact pills."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Recent activity columns are TIME, TYPE, DESCRIPTION, ASSET, VALUE, and STATUS.",
+          "cite": {
+            "anchor": "L1062-L1068",
+            "quote": "TIME\nTYPE\nDESCRIPTION\nASSET\nVALUE\nSTATUS"
+          }
+        },
+        {
+          "text": "Sample activity types include BUY, SELL, ALERT, DIVIDEND, and REBALANCE, with statuses including COMPLETED and OPEN.",
+          "cite": {
+            "anchor": "L1073-L1077",
+            "quote": "14:31:09  BUY        Increased NVDA position       NVDA  $42,100   COMPLETED\n13:58:41  SELL       Reduced XOM exposure           XOM   $18,400   COMPLETED\n13:27:12  ALERT      Risk threshold triggered      TECH  —         OPEN\n12:49:08  DIVIDEND   AAPL dividend received        AAPL  $1,284    COMPLETED\n11:04:22  REBALANCE  Sector allocation adjusted    TECH  $72,300   COMPLETED"
+          }
+        },
+        {
+          "text": "Statuses are displayed as compact pills.",
+          "cite": {
+            "anchor": "L1080-L1080",
+            "quote": "Statuses use compact pills."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n10",
+      "title": "Search assets, metrics, and reports",
+      "description": "An investment professional invokes the global search field from the header to begin finding assets, metrics, and reports, uses keyboard focus and shortcut behavior to access it quickly, and clears focus or the search overlay without destabilizing the field’s layout.",
+      "summary": "Use global search from the header",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Improves speed of access to portfolio and research context from anywhere in the terminal.",
+      "risk": "low",
+      "cite": {
+        "anchor": "L320-L322",
+        "quote": "Search assets, metrics, reports..."
+      },
+      "cites": [
+        {
+          "anchor": "L320-L322",
+          "quote": "Search assets, metrics, reports..."
+        },
+        {
+          "anchor": "L344-L347",
+          "quote": "* focus changes border to information blue\n* subtle focus ring\n* keyboard shortcut works\n* Cmd/Ctrl + K focuses the field"
+        },
+        {
+          "anchor": "L348-L349",
+          "quote": "* Escape clears focus/search overlay\n* search field remains visually stable when focused"
+        }
+      ],
+      "criteria": [
+        {
+          "text": "The global search field is labeled with the placeholder “Search assets, metrics, reports...”.",
+          "cite": {
+            "anchor": "L320-L322",
+            "quote": "Search assets, metrics, reports..."
+          }
+        },
+        {
+          "text": "Focus changes the border to information blue and applies a subtle focus ring while keeping the search field visually stable.",
+          "cite": {
+            "anchor": "L344-L349",
+            "quote": "* search field remains visually stable when focused"
+          }
+        },
+        {
+          "text": "Cmd/Ctrl + K focuses the search field and Escape clears focus or the search overlay.",
+          "cite": {
+            "anchor": "L346-L348",
+            "quote": "* keyboard shortcut works\n* Cmd/Ctrl + K focuses the field\n* Escape clears focus/search overlay"
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n11",
+      "title": "Export portfolio views and reports",
+      "description": "An investment professional opens the export popover, chooses which dashboard slice to export, selects a target format, and receives success feedback for the queued action even though the benchmark does not require a real file export implementation.",
+      "summary": "Queue exports for views, holdings, transactions, or risk",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Packages portfolio information into standard output types for downstream use without leaving the page.",
+      "risk": "low",
+      "cite": {
+        "anchor": "L1097-L1100",
+        "quote": "Export Current View\nExport Holdings\nExport Transactions\nExport Risk Report"
+      },
+      "cites": [
+        {
+          "anchor": "L1097-L1100",
+          "quote": "Export Current View\nExport Holdings\nExport Transactions\nExport Risk Report"
+        },
+        {
+          "anchor": "L1112-L1123",
+          "quote": "Format\n\n○ CSV\n○ JSON\n○ PDF"
+        },
+        {
+          "anchor": "L1125-L1127",
+          "quote": "Selecting an export action creates a fake success toast.\n\nNo real export is necessary."
+        }
+      ],
+      "criteria": [
+        {
+          "text": "Export actions are Export Current View, Export Holdings, Export Transactions, and Export Risk Report.",
+          "cite": {
+            "anchor": "L1097-L1100",
+            "quote": "Export Current View\nExport Holdings\nExport Transactions\nExport Risk Report"
+          }
+        },
+        {
+          "text": "Export formats are CSV, JSON, and PDF.",
+          "cite": {
+            "anchor": "L1112-L1116",
+            "quote": "Format\n\n○ CSV\n○ JSON\n○ PDF"
+          }
+        },
+        {
+          "text": "CSV is the default export format.",
+          "cite": {
+            "anchor": "L1119-L1122",
+            "quote": "CSV"
+          }
+        },
+        {
+          "text": "Choosing an export action creates a fake success toast, and no real export is required.",
+          "cite": {
+            "anchor": "L1125-L1127",
+            "quote": "No real export is necessary."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    },
+    {
+      "temp_ref": "n12",
+      "title": "Review profile information and options",
+      "description": "An investment professional opens the avatar popover to confirm identity, role, workspace, and status, and accesses profile-related actions such as preferences, keyboard shortcuts, and sign-out without navigating away from the single-page dashboard.",
+      "summary": "Open the profile popover and review user options",
+      "actors": [
+        "investment professional"
+      ],
+      "value": "Provides lightweight account and workspace context plus access to user-oriented actions in place.",
+      "risk": "low",
+      "cite": {
+        "anchor": "L1188-L1188",
+        "quote": "Avatar click opens profile popover."
+      },
+      "cites": [
+        {
+          "anchor": "L1188-L1188",
+          "quote": "Avatar click opens profile popover."
+        },
+        {
+          "anchor": "L1193-L1202",
+          "quote": "ABHINAV PANGARIA\n\nPortfolio Manager\n\nWorkspace\nInstitutional Demo\n\nStatus\nActive"
+        },
+        {
+          "anchor": "L1207-L1212",
+          "quote": "Preferences\nKeyboard shortcuts\nSign out"
+        }
+      ],
+      "criteria": [
+        {
+          "text": "The profile popover displays the user name, role, workspace, and status.",
+          "cite": {
+            "anchor": "L1193-L1202",
+            "quote": "ABHINAV PANGARIA\n\nPortfolio Manager\n\nWorkspace\nInstitutional Demo\n\nStatus\nActive"
+          }
+        },
+        {
+          "text": "Profile actions are Preferences, Keyboard shortcuts, and Sign out.",
+          "cite": {
+            "anchor": "L1207-L1209",
+            "quote": "Preferences\nKeyboard shortcuts\nSign out"
+          }
+        },
+        {
+          "text": "No profile action should navigate away from the page.",
+          "cite": {
+            "anchor": "L1212-L1212",
+            "quote": "No action should navigate away."
+          }
+        }
+      ],
+      "depends_on_hint": []
+    }
+  ]
+}

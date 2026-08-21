@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each of Export Current View, Export Holdings, Export Transactions, and Export Risk Report is present as an export action title.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"the export action list includes Export Current View, Export Holdings, Export Transactions, and Export Risk Report"}}}

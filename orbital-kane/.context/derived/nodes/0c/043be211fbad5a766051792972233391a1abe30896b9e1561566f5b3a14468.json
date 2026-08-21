@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The security modal contains security name, ticker, price, daily move, chart, fundamentals, analyst consensus, and recent news.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":["security name","ticker","price","daily move","chart","fundamentals","analyst consensus","recent news"]}}}

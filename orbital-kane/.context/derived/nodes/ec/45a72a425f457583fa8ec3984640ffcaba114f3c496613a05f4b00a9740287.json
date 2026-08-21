@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a market row does not move neighboring content.","kind":"delta","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","baseline":"neighboring content position before hover","operand":0,"unit":"px"}}}

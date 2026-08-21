@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Explicitly activating a ticker opens a security preview popover.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a security preview popover for the activated ticker"}}}

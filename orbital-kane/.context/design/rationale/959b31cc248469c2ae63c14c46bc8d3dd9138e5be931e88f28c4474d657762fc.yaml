@@ -1,0 +1,9 @@
+anchor: ac-67
+combinatorial:
+  reason: by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because there is no multi-input combination space in the cited default-state content.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: equivalence partitioning over the default holdings-card state, verifying the named row set and required columns as one read-only presentation class. strength=2 by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because there is no multi-input combination space in the cited default-state content.'

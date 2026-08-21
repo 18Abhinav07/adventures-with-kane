@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The warning popover displays the recommended action \"Review sector concentration.\".","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible popover recommended action reading \"Review sector concentration.\""}}}

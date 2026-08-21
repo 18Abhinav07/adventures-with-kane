@@ -1,0 +1,9 @@
+anchor: ac-9
+combinatorial:
+  reason: Applied equivalence partitioning to the fixed sidebar inventory and default-state promises on initial load. This path covers the one-time initial shell state rather than an interaction combination, so no covering array was needed. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to the fixed sidebar inventory and default-state promises on initial load. This path covers the one-time initial shell state rather than an interaction combination, so no covering array was needed. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies.

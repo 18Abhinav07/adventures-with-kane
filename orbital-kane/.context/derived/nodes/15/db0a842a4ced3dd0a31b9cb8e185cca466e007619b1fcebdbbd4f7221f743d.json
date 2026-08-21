@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The Sign out action can be activated from the profile popover.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"exists","operand":"Sign out action responds to activation from the profile popover"}}}

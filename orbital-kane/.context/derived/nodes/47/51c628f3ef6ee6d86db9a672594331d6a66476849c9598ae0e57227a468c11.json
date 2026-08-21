@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The section visibility controls cover exactly Portfolio Summary, Performance, Allocation, Holdings, Risk, Market Overview, Alerts, and Activity.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":["Portfolio Summary","Performance","Allocation","Holdings","Risk","Market Overview","Alerts","Activity"]}}}

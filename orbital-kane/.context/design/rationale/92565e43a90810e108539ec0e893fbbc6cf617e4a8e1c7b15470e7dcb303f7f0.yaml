@@ -1,0 +1,9 @@
+anchor: ac-123
+combinatorial:
+  reason: Applied equivalence partitioning to review the complete set of action titles and format titles as one initial-state path because the source defined finite discrete options. Applied rendered-surface inspection for shared chrome because the source promised icon and description on each action. Skipped boundary value analysis, negative/error, state/flow, auth, i18n, responsiveness, persistence, and pagination because the source stated no constrained input, failure path, gated role, locale behavior, alternate viewport behavior, refresh behavior, or collection semantics. No covering array was needed because this scenario inspected the initial state rather than a combination matrix. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to review the complete set of action titles and format titles as one initial-state path because the source defined finite discrete options. Applied rendered-surface inspection for shared chrome because the source promised icon and description on each action. Skipped boundary value analysis, negative/error, state/flow, auth, i18n, responsiveness, persistence, and pagination because the source stated no constrained input, failure path, gated role, locale behavior, alternate viewport behavior, refresh behavior, or collection semantics. No covering array was needed because this scenario inspected the initial state rather than a combination matrix. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.

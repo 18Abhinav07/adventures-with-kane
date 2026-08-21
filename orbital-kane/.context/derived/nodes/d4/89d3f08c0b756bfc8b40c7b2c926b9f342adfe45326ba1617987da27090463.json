@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The time-range control offers the values 1D, 1W, 1M, 3M, YTD, 1Y, and ALL.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":["1D","1W","1M","3M","YTD","1Y","ALL"]}}}

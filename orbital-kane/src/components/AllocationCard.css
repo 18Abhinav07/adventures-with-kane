@@ -1,0 +1,94 @@
+.allocation-card {
+  background: var(--secondary-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.allocation-card-header {
+  margin-bottom: 8px;
+}
+
+.allocation-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.allocation-chart-area {
+  position: relative;
+}
+
+.allocation-center-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.allocation-center-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.allocation-center-caption {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--muted-text);
+  margin-top: 2px;
+}
+
+.allocation-legend {
+  list-style: none;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.allocation-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+}
+
+.allocation-legend-item.active {
+  background: var(--elevated-surface);
+}
+
+.allocation-legend-swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+
+.allocation-legend-label {
+  color: var(--primary-text);
+  flex: 1 1 auto;
+}
+
+.allocation-legend-percent {
+  color: var(--secondary-text);
+  font-variant-numeric: tabular-nums;
+  width: 36px;
+  text-align: right;
+}
+
+.allocation-legend-value {
+  color: var(--secondary-text);
+  font-variant-numeric: tabular-nums;
+  width: 56px;
+  text-align: right;
+}

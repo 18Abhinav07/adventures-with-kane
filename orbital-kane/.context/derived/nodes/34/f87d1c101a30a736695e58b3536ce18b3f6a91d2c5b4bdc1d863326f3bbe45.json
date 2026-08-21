@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The warning popover displays the heading \"TECHNOLOGY OVERWEIGHT\".","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible warning popover heading reading \"TECHNOLOGY OVERWEIGHT\""}}}

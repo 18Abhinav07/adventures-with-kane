@@ -1,0 +1,92 @@
+.customize-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 80;
+}
+
+.customize-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 340px;
+  background: var(--elevated-surface);
+  border-left: 1px solid var(--strong-border);
+  z-index: 81;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+}
+
+.customize-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customize-drawer-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.customize-drawer-close {
+  background: transparent;
+  border: none;
+  color: var(--secondary-text);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.customize-drawer-close:hover {
+  color: var(--primary-text);
+}
+
+.customize-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.customize-section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+}
+
+.customize-density-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customize-density-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--primary-text);
+  cursor: pointer;
+}
+
+.customize-toggle-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customize-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--primary-text);
+  cursor: pointer;
+}

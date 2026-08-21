@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"After pressing Escape, the warning popover changes from open to closed.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"closed","baseline":"open"}}}

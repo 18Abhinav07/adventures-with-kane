@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-primary);
+}
+
+.role {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  font-size: 11px;
+}
+
+.fieldLabel {
+  color: var(--color-text-muted);
+}
+
+.fieldValue {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-3) 0;
+}
+
+.action {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--space-2) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--color-text-primary);
+  transition: background var(--dur-micro) var(--ease-standard);
+}
+
+.action:hover {
+  background: var(--color-surface-secondary);
+}

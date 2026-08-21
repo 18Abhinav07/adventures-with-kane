@@ -1,0 +1,70 @@
+:root {
+  --bg: #0F1115;
+  --surface: #181B21;
+  --border: #2A2F3A;
+  --text-primary: #F5F6F8;
+  --text-secondary: #9AA1AC;
+  --accent: #5B8CFF;
+  --danger: #FF5B7A;
+}
+
+:root[data-theme='light'] {
+  --bg: #F5F6F8;
+  --surface: #FFFFFF;
+  --border: #E2E5EA;
+  --text-primary: #0F1115;
+  --text-secondary: #6B7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes shrinkWidth {
+  from { width: 100%; }
+  to { width: 0%; }
+}

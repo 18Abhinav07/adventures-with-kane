@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The warning popover displays Target as 27.5%.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible popover field labeled \"Target\" with value \"27.5%\""}}}

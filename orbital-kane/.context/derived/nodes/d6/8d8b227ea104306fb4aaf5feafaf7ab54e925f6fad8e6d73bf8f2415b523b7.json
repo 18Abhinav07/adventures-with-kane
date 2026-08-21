@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The holdings table shows exactly eight holdings rows.","kind":"count","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":8,"unit":"rows"}}}

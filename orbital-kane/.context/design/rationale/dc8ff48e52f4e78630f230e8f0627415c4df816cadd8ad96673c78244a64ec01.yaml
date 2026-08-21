@@ -1,0 +1,9 @@
+anchor: ac-73
+combinatorial:
+  reason: Applied equivalence partitioning to keep the default read-only dashboard path distinct from the interactive popover path. I judged pagination, boundary, security, perf, i18n, and responsiveness techniques not applicable from the cited source because it described fixed displayed values and warning interaction only. No covering array was needed; risk-judged combinatorial strength remained 2 (no money, auth, or data-loss factors applied to the grounded behavior).
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to keep the default read-only dashboard path distinct from the interactive popover path. I judged pagination, boundary, security, perf, i18n, and responsiveness techniques not applicable from the cited source because it described fixed displayed values and warning interaction only. No covering array was needed; risk-judged combinatorial strength remained 2 (no money, auth, or data-loss factors applied to the grounded behavior).

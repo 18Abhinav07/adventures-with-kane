@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The performance chart does not rely on a default browser/graph-library tooltip.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"default browser/graph-library tooltip"}}}

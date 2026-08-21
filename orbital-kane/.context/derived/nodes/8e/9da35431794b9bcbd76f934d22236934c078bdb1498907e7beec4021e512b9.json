@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Disabling Hover Indicators prevents the performance chart from showing an active hover marker.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"an active hover marker on the performance chart"}}}

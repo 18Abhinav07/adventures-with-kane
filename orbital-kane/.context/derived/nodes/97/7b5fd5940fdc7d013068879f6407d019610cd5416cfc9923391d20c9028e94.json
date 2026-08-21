@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Overview is the default selected sidebar item when the workspace first loads.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"Overview"}}}

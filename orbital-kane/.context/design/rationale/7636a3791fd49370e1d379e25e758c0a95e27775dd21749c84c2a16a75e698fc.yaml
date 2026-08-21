@@ -1,0 +1,9 @@
+anchor: ac-32
+combinatorial:
+  reason: State/flow applied because the chart moves from unhovered to hovered state and the outcome includes both newly visible hover data and a non-changing dashboard summary. Negative/error reasoning applied to the forbidden summary-card drift and forbidden default-tooltip behavior.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: State/flow applied because the chart moves from unhovered to hovered state and the outcome includes both newly visible hover data and a non-changing dashboard summary. Negative/error reasoning applied to the forbidden summary-card drift and forbidden default-tooltip behavior.

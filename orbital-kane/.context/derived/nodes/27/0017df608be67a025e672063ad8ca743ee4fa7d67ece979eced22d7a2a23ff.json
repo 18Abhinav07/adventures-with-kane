@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"All chart option controls are enabled by default.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":["Benchmark","Grid","Hover Indicators"]}}}

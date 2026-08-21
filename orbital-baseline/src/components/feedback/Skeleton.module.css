@@ -1,0 +1,26 @@
+.skeleton {
+  background: linear-gradient(
+    100deg,
+    var(--color-surface-secondary) 30%,
+    var(--color-surface-elevated) 50%,
+    var(--color-surface-secondary) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: var(--color-surface-secondary);
+  }
+}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a chart point shows the custom tooltip.","kind":"propagation","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"custom tooltip when hovering a chart point"}}}

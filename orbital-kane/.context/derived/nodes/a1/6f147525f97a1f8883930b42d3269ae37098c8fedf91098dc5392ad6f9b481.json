@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"A section re-enabled in Customize becomes visible on the dashboard again.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"the dashboard section whose visibility toggle was just turned back on"}}}

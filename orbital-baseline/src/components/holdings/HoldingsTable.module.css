@@ -1,0 +1,125 @@
+.card {
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.viewAll {
+  color: var(--color-information);
+  font-size: 11px;
+  font-weight: 500;
+  transition: opacity var(--dur-micro) var(--ease-standard);
+}
+
+.viewAll:hover {
+  opacity: 0.8;
+}
+
+.skeletonList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tableWrap {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(160px, 2fr) repeat(5, minmax(72px, 1fr));
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--dur-micro) var(--ease-standard);
+}
+
+.row:hover {
+  background: var(--color-surface-secondary);
+}
+
+.headRow {
+  height: 32px;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+
+.headRow:hover {
+  background: transparent;
+}
+
+.headRow span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.colAsset {
+  padding-left: var(--space-1);
+}
+
+.colNum {
+  text-align: right;
+  padding-right: var(--space-1);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+.assetButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-1);
+  height: 100%;
+  min-width: 0;
+  border-radius: var(--radius-md);
+}
+
+.tickerIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-bg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.assetText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  align-items: flex-start;
+}
+
+.ticker {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.name {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.positive {
+  color: var(--color-positive);
+}
+
+.negative {
+  color: var(--color-negative);
+}

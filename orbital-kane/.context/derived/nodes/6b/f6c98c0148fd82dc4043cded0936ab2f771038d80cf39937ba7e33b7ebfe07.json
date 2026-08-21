@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a market row enlarges that row's sparkline region.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","baseline":"default sparkline region size","operand":"larger sparkline region on hover"}}}

@@ -1,19 +1,28 @@
 import { readTracker, writeTracker } from '../../lib/tracker.js';
-import { runKaneTest } from '../../lib/kane.js';
+import { runKaneTest, runKaneSweep } from '../../lib/kane.js';
+import { getAppUrl } from '../../lib/config.js';
+import { logActivity } from '../../lib/logger.js';
+import { loadMemory, saveMemory, recordBug, findMatches } from '../../lib/bug-memory.js';
 import { decide } from './guardian-kane-stop.js';
 import { execSync } from 'node:child_process';
 
 const TRACKER_PATH = '.testmuai/task-tracker.md';
 
-const DEV_SERVER_URL = 'http://localhost:8080';
-
 function probeReady() {
+  // No hardcoded fallback port: a wrong silent guess here is worse than a
+  // loud, visible "not ready" — see lib/config.js.
+  let appUrl;
   try {
-    execSync(`curl -sf ${DEV_SERVER_URL} -o /dev/null`, { timeout: 3000 });
+    appUrl = getAppUrl();
+  } catch {
+    return false;
+  }
+  try {
+    execSync(`curl -sf ${appUrl} -o /dev/null`, { timeout: 3000 });
     return true;
   } catch {
     try {
-      execSync(`sleep 3 && curl -sf ${DEV_SERVER_URL} -o /dev/null`, { timeout: 6000 });
+      execSync(`sleep 3 && curl -sf ${appUrl} -o /dev/null`, { timeout: 6000 });
       return true;
     } catch {
       return false;
@@ -25,7 +34,8 @@ let stdin = '';
 process.stdin.on('data', d => stdin += d);
 process.stdin.on('end', () => {
   const { tasks } = readTracker(TRACKER_PATH);
-  const result = decide({ tasks }, { probeReady, runKane: runKaneTest });
+  const bugMemory = { memory: loadMemory(), recordBug, findMatches, saveMemory: (m) => saveMemory(m) };
+  const result = decide({ tasks }, { probeReady, runKane: runKaneTest, runSweep: runKaneSweep, log: logActivity, bugMemory });
   writeTracker(TRACKER_PATH, { tasks });
 
   if (result.decision === 'deny') {

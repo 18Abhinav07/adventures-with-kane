@@ -1,0 +1,123 @@
+.holdings-card {
+  background: var(--secondary-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 20px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.holdings-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.holdings-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.holdings-view-all {
+  background: transparent;
+  border: none;
+  color: var(--information);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.holdings-table thead th {
+  text-align: right;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted-text);
+  padding: 0 4px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.holdings-table thead th.col-asset {
+  text-align: left;
+}
+
+.holdings-row {
+  height: 48px;
+  transition: background 120ms ease-out;
+}
+
+.holdings-row:hover {
+  background: var(--elevated-surface);
+}
+
+.holdings-row td {
+  padding: 0 4px;
+  text-align: right;
+  color: var(--primary-text);
+  font-variant-numeric: tabular-nums;
+  border-bottom: 1px solid var(--border);
+}
+
+.holdings-row:last-child td {
+  border-bottom: none;
+}
+
+.col-asset {
+  text-align: left !important;
+}
+
+.asset-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asset-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--elevated-surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--secondary-text);
+  flex: 0 0 auto;
+}
+
+.asset-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.asset-ticker {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-text);
+  cursor: pointer;
+  width: fit-content;
+}
+
+.asset-company {
+  font-size: 10px;
+  color: var(--muted-text);
+}
+
+.col-day.positive,
+.col-pnl.positive {
+  color: var(--positive);
+}
+
+.col-day.negative,
+.col-pnl.negative {
+  color: var(--negative);
+}

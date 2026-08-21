@@ -1,0 +1,124 @@
+.performance-card {
+  background: var(--secondary-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 20px 20px;
+}
+
+.performance-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.performance-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.performance-card-period {
+  font-size: 11px;
+  color: var(--secondary-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-card-period.positive {
+  color: var(--positive);
+}
+
+.performance-card-period.negative {
+  color: var(--negative);
+}
+
+.performance-chart-area {
+  position: relative;
+}
+
+.performance-active-point {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.performance-active-point-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--information);
+  background: rgba(93, 169, 255, 0.12);
+  transform: translate(-50%, -50%);
+}
+
+.performance-active-point-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--information);
+  transform: translate(-50%, -50%);
+}
+
+.performance-tooltip {
+  position: absolute;
+  transform: translate(12px, -110%);
+  min-width: 160px;
+  background: var(--elevated-surface);
+  border: 1px solid var(--strong-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+}
+
+.performance-tooltip-lock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--information);
+}
+
+.performance-tooltip-date {
+  font-size: 10px;
+  color: var(--muted-text);
+  margin-bottom: 6px;
+}
+
+.performance-tooltip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+  padding: 2px 0;
+}
+
+.performance-tooltip-label {
+  color: var(--secondary-text);
+}
+
+.performance-tooltip-value {
+  color: var(--primary-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-tooltip-value.positive {
+  color: var(--positive);
+}
+
+.performance-tooltip-value.negative {
+  color: var(--negative);
+}

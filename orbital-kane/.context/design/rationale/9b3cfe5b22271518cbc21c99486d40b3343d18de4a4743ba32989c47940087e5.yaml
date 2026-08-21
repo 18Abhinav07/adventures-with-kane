@@ -1,0 +1,9 @@
+anchor: ac-131
+combinatorial:
+  reason: 'Techniques: equivalence partitioning. This path covers the default-state partition and the documented option sets without asserting unresolved density-change behavior from gap-20. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: equivalence partitioning. This path covers the default-state partition and the documented option sets without asserting unresolved density-change behavior from gap-20. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'

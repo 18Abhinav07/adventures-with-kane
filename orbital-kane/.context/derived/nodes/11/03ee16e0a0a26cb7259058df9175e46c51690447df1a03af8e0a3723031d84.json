@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"When focused, the global search field height remains 36px.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"36px"}}}

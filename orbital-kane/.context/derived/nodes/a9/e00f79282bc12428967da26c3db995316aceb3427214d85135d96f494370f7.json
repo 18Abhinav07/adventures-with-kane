@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each export action displays a description.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"every export action includes a description"}}}

@@ -1,0 +1,9 @@
+anchor: ac-115
+combinatorial:
+  reason: Applied equivalence partitioning to the displayed alert set and allowed severity vocabulary, using one review path to cover the required alert-title members and the required per-alert field classes. Kept the content review separate from interaction paths so the static feed-content promises can be proven without conflating them with expansion behavior. No combinatorial covering array was needed because the source defines a fixed alert list rather than independent input combinations.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to the displayed alert set and allowed severity vocabulary, using one review path to cover the required alert-title members and the required per-alert field classes. Kept the content review separate from interaction paths so the static feed-content promises can be proven without conflating them with expansion behavior. No combinatorial covering array was needed because the source defines a fixed alert list rather than independent input combinations.

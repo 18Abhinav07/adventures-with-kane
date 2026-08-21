@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Selecting a different time-range value updates the performance chart data range.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"performance chart data range","baseline":"performance chart data range before selecting a different time-range value"}}}

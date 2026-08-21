@@ -1,0 +1,9 @@
+anchor: ac-118
+combinatorial:
+  reason: Applied equivalence partitioning across the four export actions because they are discrete choices with the same promised visible outcome. Used covering-array authority over input classes {action}; requested strength 2 from the user-reach-only risk profile and accepted the tool's degradation to strength 1 because only one varying input remained once the format stayed at the default CSV value. Skipped boundary, negative, state-flow, auth, persistence, i18n, a11y, responsiveness, and pagination techniques because the source defined no invalid action, multi-step gate, stored side effect, locale rule, accessibility promise, viewport rule, or sortable/filterable list behavior. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning across the four export actions because they are discrete choices with the same promised visible outcome. Used covering-array authority over input classes {action}; requested strength 2 from the user-reach-only risk profile and accepted the tool's degradation to strength 1 because only one varying input remained once the format stayed at the default CSV value. Skipped boundary, negative, state-flow, auth, persistence, i18n, a11y, responsiveness, and pagination techniques because the source defined no invalid action, multi-step gate, stored side effect, locale rule, accessibility promise, viewport rule, or sortable/filterable list behavior. Estimated total design size remained 4 scenario/test pairs, below budget ceiling 8.

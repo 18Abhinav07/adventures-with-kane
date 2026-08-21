@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Pressing Space on the focused Allocation section toggle changes it from checked to unchecked.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","baseline":"checked","operand":"unchecked"}}}

@@ -1,0 +1,103 @@
+.export-popover {
+  position: fixed;
+  z-index: 60;
+  width: 280px;
+  background: var(--elevated-surface);
+  border: 1px solid var(--strong-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export-action-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.export-action-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.export-action-row:hover {
+  background: var(--secondary-surface);
+}
+
+.export-action-icon {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.export-action-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.export-action-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.export-action-description {
+  font-size: 11px;
+  color: var(--secondary-text);
+}
+
+.export-format-section {
+  border-top: 1px solid var(--border);
+  padding: 8px 8px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.export-format-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+}
+
+.export-format-options {
+  display: flex;
+  gap: 14px;
+}
+
+.export-format-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--primary-text);
+  cursor: pointer;
+}
+
+.export-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 70;
+  background: var(--elevated-surface);
+  border: 1px solid var(--positive);
+  color: var(--primary-text);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}

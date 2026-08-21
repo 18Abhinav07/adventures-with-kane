@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The security preview popover contains ticker, company name, price, daily move, Market Cap, P/E, 52W range, and an OPEN SECURITY action.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":["ticker","company name","price","daily move","Market Cap","P/E","52W range","OPEN SECURITY"]}}}

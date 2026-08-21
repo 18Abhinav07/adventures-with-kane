@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each displayed status is rendered as a pill-style label in the STATUS column.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"forall","operand":"every visible STATUS value is shown inside a compact pill-style badge"}}}

@@ -1,0 +1,9 @@
+anchor: ac-48
+combinatorial:
+  reason: Applied state_flow because the promise is a context-change reset after a maintained selection. Depends on the lock/unlock path because a locked segment is the required precondition. No separate time-range value partition was minted because the source states only a generic time-range context change, not the supported range set. Budget ceiling=8 existed; budget_cut kept this scenario with the highest score due to stale-context risk.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state_flow because the promise is a context-change reset after a maintained selection. Depends on the lock/unlock path because a locked segment is the required precondition. No separate time-range value partition was minted because the source states only a generic time-range context change, not the supported range set. Budget ceiling=8 existed; budget_cut kept this scenario with the highest score due to stale-context risk.

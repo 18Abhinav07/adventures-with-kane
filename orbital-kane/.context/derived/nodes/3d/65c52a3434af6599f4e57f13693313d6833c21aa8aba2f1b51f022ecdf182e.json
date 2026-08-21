@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The chart option controls cover exactly Benchmark, Grid, and Hover Indicators.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":["Benchmark","Grid","Hover Indicators"]}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering the performance chart does not modify summary-card data.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"summary-card data matches the pre-hover dashboard summary values","baseline":"summary-card data before hover"}}}

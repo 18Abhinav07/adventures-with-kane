@@ -1,0 +1,9 @@
+anchor: ac-65
+combinatorial:
+  reason: by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because the path varies by one dismissal method.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: state_flow for the modal-open to modal-closed transition; equivalence partitioning over supported dismissal methods, with backdrop click kept separate because the PRD names it as an independent close route. strength=2 by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because the path varies by one dismissal method.'

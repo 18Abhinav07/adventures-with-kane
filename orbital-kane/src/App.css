@@ -1,0 +1,69 @@
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-body {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.main-workspace {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+.workspace-content {
+  padding: 24px 28px;
+  color: var(--secondary-text);
+  font-size: 12px;
+}
+
+.dashboard-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dashboard-stack.density-compact {
+  gap: 6px;
+}
+
+.dashboard-stack.density-comfortable {
+  gap: 12px;
+}
+
+.dashboard-stack.density-spacious {
+  gap: 24px;
+}
+
+.dashboard-grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.density-compact .dashboard-grid-row {
+  gap: 6px;
+}
+
+.density-spacious .dashboard-grid-row {
+  gap: 24px;
+}
+
+.dashboard-grid-row .performance-card {
+  grid-column: span 8;
+}
+
+.dashboard-grid-row .allocation-card {
+  grid-column: span 4;
+}

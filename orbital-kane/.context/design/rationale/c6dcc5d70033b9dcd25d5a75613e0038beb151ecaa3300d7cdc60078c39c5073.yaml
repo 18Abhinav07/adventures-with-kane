@@ -1,0 +1,9 @@
+anchor: ac-16
+combinatorial:
+  reason: Presence and absolute checks from straightforward source-backed defaults and static chart composition. No boundary, security, perf, or i18n expansion applied because the source for this use-case states neither input bounds nor those behavior families.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Presence and absolute checks from straightforward source-backed defaults and static chart composition. No boundary, security, perf, or i18n expansion applied because the source for this use-case states neither input bounds nor those behavior families.

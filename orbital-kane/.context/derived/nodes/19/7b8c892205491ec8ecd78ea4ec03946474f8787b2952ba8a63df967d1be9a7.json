@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The default active time range is 1M.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"1M"}}}

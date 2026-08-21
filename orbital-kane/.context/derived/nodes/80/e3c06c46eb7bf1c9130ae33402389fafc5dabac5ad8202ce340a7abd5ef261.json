@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Clicking the avatar opens the profile popover.","kind":"presence","risk":"low","derived":true,"expected_answer":{"operator":"exists","operand":"profile popover becomes visible after the avatar is activated"}}}

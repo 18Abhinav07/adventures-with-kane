@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Changing the time range clears the selected chart point.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"no selected chart point","baseline":"locked selected chart point before the time-range change"}}}

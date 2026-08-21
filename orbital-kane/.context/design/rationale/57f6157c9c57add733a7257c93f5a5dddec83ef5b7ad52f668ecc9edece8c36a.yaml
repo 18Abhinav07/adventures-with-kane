@@ -1,0 +1,9 @@
+anchor: ac-116
+combinatorial:
+  reason: 'Direct source-path decomposition from the Recent Activity section. No equivalence-class or combinatorial expansion was needed because the source specified one fixed table structure and no outcome-changing inputs. Budget estimate: 1 scenario/test pair for this path, within the max_pairs ceiling of 8.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Direct source-path decomposition from the Recent Activity section. No equivalence-class or combinatorial expansion was needed because the source specified one fixed table structure and no outcome-changing inputs. Budget estimate: 1 scenario/test pair for this path, within the max_pairs ceiling of 8.'

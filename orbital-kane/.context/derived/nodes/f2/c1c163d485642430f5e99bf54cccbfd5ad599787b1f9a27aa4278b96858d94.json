@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Clicking Customize opens a right-side drawer.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"right-side drawer"}}}

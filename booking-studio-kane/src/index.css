@@ -1,0 +1,47 @@
+:root,
+:root[data-theme='dark'] {
+  --bg: #0F1115;
+  --surface: #181B21;
+  --border: #2A2F3A;
+  --text-primary: #F5F6F8;
+  --text-secondary: #9AA1AC;
+  --accent: #5B8CFF;
+  --error: #FF5B7A;
+}
+
+:root[data-theme='light'] {
+  --bg: #F5F6F8;
+  --surface: #FFFFFF;
+  --border: #E2E5EA;
+  --text-primary: #0F1115;
+  --text-secondary: #6B7280;
+  --accent: #5B8CFF;
+  --error: #FF5B7A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text-primary);
+  transition: background 150ms ease, color 150ms ease;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,9 @@
+anchor: ac-94
+combinatorial:
+  reason: Applied persistence/refresh-style reasoning to repeated rendering of the same overview state so the path proves sameness across renders, not just presence on one render. Boundary, negative, auth, and concurrency techniques were not applicable because the source defines a display determinism promise without input ranges, write operations, or access branches. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied persistence/refresh-style reasoning to repeated rendering of the same overview state so the path proves sameness across renders, not just presence on one render. Boundary, negative, auth, and concurrency techniques were not applicable because the source defines a display determinism promise without input ranges, write operations, or access branches. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.

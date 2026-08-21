@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The risk monitor displays Beta as 0.93.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a risk metric labeled \"Beta\" with displayed value \"0.93\""}}}

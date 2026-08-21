@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The security modal closes when the close button is used.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"security modal closed","baseline":"security modal open"}}}

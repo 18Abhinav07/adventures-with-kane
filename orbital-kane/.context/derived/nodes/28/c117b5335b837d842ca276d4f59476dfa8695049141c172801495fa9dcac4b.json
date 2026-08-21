@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a segment expands that segment by 4px.","kind":"delta","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":4,"baseline":"segment size before hover","unit":"px"}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a chart point updates the displayed date.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"displayed date","baseline":"displayed date before hover"}}}

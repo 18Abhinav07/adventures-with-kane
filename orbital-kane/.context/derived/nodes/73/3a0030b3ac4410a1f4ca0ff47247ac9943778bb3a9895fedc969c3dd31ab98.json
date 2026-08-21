@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Pressing Escape clears a locked chart-point selection.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"no locked chart-point selection","baseline":"locked chart-point selection before Escape"}}}

@@ -1,0 +1,9 @@
+anchor: ac-154
+combinatorial:
+  reason: Applied auth and state / flow. Strength=3 because auth risk applies to this signed-in profile action. No covering-array expansion was needed because the source named one concrete action path and no independent variable inputs.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: inferred'
+profile_family: unspecified
+surface_state: absent
+technique: Applied auth and state / flow. Strength=3 because auth risk applies to this signed-in profile action. No covering-array expansion was needed because the source named one concrete action path and no independent variable inputs.

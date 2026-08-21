@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The time-range control has exactly one active value.","kind":"count","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":1,"unit":"active time-range value"}}}

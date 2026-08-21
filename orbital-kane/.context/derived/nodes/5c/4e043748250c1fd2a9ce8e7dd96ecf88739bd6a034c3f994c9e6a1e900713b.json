@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating Sign out from the profile popover does not navigate away from the current dashboard page.","kind":"state-transition","risk":"low","derived":true,"expected_answer":{"operator":"equals","baseline":"current dashboard page before activating Sign out","operand":"same dashboard page remains active after Sign out is activated"}}}

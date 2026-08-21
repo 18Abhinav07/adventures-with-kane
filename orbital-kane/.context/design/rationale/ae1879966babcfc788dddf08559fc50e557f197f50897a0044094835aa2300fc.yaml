@@ -1,0 +1,9 @@
+anchor: ac-31
+combinatorial:
+  reason: State/flow applied because the path verifies a keyboard-driven transition from locked to cleared state. I kept this as an edge path rather than an a11y path because the source promises the Escape behavior itself but does not state broader keyboard-accessibility requirements.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: State/flow applied because the path verifies a keyboard-driven transition from locked to cleared state. I kept this as an edge path rather than an a11y path because the source promises the Escape behavior itself but does not state broader keyboard-accessibility requirements.

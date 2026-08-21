@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating a sidebar item changes the active sidebar state to the clicked item.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"the active sidebar item changes from the previously selected item to the clicked item","baseline":"previous active sidebar item"}}}

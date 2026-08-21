@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The profile popover offers exactly these actions in the list: Preferences, Keyboard shortcuts, and Sign out.","kind":"absolute","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"action list shows Preferences, Keyboard shortcuts, and Sign out"}}}

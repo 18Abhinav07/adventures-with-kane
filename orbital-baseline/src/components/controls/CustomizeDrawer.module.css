@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: background var(--dur-micro) var(--ease-standard), color var(--dur-micro) var(--ease-standard);
+}
+
+.close:hover {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+}
+
+.body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.radioList,
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.radioRow,
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background var(--dur-micro) var(--ease-standard);
+  cursor: pointer;
+}
+
+.radioRow:hover,
+.checkRow:hover {
+  background: var(--color-surface-secondary);
+}
+
+.radioLabel,
+.checkLabel {
+  font-size: 12px;
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Sparkline traces remain identical across repeated renders of the same market overview state.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"Sparkline traces for the four market rows match their baseline traces after a repeated render of the same market overview state."}}}

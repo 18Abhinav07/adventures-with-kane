@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The warning popover displays Current allocation as 31.7%.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible popover field labeled \"Current allocation\" with value \"31.7%\""}}}

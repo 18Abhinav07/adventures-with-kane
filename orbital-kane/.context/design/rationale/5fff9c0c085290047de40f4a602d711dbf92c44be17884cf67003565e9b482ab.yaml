@@ -1,0 +1,9 @@
+anchor: ac-138
+combinatorial:
+  reason: 'Techniques: state / flow + equivalence partitioning. This is an outcome-changing toggle family, so it is its own scenario rather than a parameter on another chart-option path. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: state / flow + equivalence partitioning. This is an outcome-changing toggle family, so it is its own scenario rather than a parameter on another chart-option path. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'

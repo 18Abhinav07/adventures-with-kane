@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The alert list contains no more than one expanded alert at a time.","kind":"bound","risk":"med","derived":true,"expected_answer":{"operator":"lte","operand":1,"unit":"expanded alerts"}}}

@@ -1,0 +1,64 @@
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-warning);
+  margin-bottom: var(--space-2);
+}
+
+.summary {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.4;
+}
+
+.statGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.statLabel {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.statValue {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.deviation {
+  color: var(--color-warning);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.actionLabel {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.actionValue {
+  font-size: 12px;
+  color: var(--color-text-primary);
+}

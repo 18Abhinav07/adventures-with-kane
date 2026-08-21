@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"When the global search field is focused and no search overlay is active, pressing Escape clears focus from the field.","kind":"state-transition","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":"global search field not focused","baseline":"global search field focused and no search overlay active"}}}

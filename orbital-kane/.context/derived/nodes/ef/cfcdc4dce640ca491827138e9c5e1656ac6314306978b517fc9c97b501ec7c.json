@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The keyboard-focused Customize control shows a visible focus indicator.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"visible focus indicator on the currently keyboard-focused Customize control"}}}

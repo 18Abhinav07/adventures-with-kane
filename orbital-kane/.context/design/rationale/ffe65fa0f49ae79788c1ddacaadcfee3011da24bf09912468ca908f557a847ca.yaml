@@ -1,0 +1,9 @@
+anchor: ac-90
+combinatorial:
+  reason: Applied equivalence partitioning to the required instrument set and per-row field presence because this path validates the baseline representative state of the overview. Negative, boundary, auth, and pagination techniques were not applicable because the source describes a read-only dashboard module with no user-entered inputs, access rule, or result-set variation. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to the required instrument set and per-row field presence because this path validates the baseline representative state of the overview. Negative, boundary, auth, and pagination techniques were not applicable because the source describes a read-only dashboard module with no user-entered inputs, access rule, or result-set variation. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The dashboard shows the concentration warning headline \"Risk concentration detected\".","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a visible concentration warning headline reading \"Risk concentration detected\""}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The SYSTEM sidebar section contains Alerts and Data Health.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"the SYSTEM sidebar section shows Alerts and Data Health"}}}

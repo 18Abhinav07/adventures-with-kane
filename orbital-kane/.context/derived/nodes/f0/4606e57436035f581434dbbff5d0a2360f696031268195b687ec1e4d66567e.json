@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Activating a sidebar navigation item keeps the application within the same page instead of routing away.","kind":"forbidden-presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"application routing, separate dashboard pages, navigation to another URL, or a multi-page workflow caused by sidebar navigation"}}}

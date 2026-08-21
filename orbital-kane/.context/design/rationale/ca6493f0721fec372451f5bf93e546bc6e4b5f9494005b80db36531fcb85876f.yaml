@@ -1,0 +1,9 @@
+anchor: ac-30
+combinatorial:
+  reason: State/flow applied because the interaction traverses unlocked → locked → unlocked chart states. No combinatorial expansion was needed because the source defines one interaction family rather than outcome-changing value classes.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: State/flow applied because the interaction traverses unlocked → locked → unlocked chart states. No combinatorial expansion was needed because the source defines one interaction family rather than outcome-changing value classes.

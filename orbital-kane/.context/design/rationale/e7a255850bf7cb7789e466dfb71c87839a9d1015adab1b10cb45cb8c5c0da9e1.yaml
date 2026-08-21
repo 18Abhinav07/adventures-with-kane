@@ -1,0 +1,9 @@
+anchor: ac-7
+combinatorial:
+  reason: Applied equivalence partitioning to the SYSTEM family by choosing one representative item with the same expected in-place navigation outcome as the other SYSTEM targets. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies; no covering array was needed for this one-input representative path.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to the SYSTEM family by choosing one representative item with the same expected in-place navigation outcome as the other SYSTEM targets. Risk-gated covering strength was 2 because no money, auth, or data-loss factor applies; no covering array was needed for this one-input representative path.

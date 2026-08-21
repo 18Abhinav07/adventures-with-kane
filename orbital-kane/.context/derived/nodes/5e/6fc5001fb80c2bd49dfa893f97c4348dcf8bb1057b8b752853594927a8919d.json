@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Every displayed alert severity is one of critical, warning, or info.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"displayed alert severity is one of critical, warning, or info"}}}

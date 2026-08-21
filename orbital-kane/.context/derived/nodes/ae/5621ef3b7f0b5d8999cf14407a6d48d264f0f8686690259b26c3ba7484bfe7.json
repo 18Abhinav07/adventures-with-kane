@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Each market row includes a daily percentage.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"Each market row includes a daily percentage field."}}}

@@ -1,0 +1,54 @@
+.wrap {
+  position: relative;
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-1);
+}
+
+.track {
+  position: relative;
+  height: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  overflow: hidden;
+}
+
+.zoneLow,
+.zoneModerate,
+.zoneHigh {
+  flex: 1;
+}
+
+.zoneLow {
+  background: var(--color-positive);
+  opacity: 0.5;
+}
+
+.zoneModerate {
+  background: var(--color-warning);
+  opacity: 0.5;
+}
+
+.zoneHigh {
+  background: var(--color-negative);
+  opacity: 0.5;
+}
+
+.needle {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 12px;
+  background: var(--color-text-primary);
+  transform: translateX(-1px);
+  transition: left var(--dur-panel) var(--ease-standard);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}

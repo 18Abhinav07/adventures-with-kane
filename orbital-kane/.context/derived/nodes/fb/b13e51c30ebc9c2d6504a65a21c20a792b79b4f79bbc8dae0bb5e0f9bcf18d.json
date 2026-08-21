@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a chart point updates the displayed benchmark value.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"displayed benchmark value","baseline":"displayed benchmark value before hover"}}}

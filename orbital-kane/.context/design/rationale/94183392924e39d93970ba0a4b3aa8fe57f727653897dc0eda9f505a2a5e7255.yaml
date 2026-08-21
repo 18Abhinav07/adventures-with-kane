@@ -1,0 +1,9 @@
+anchor: ac-61
+combinatorial:
+  reason: by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because this path varies by a single entry action.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: state_flow for the preview-to-modal transition; equivalence partitioning for the OPEN SECURITY action as the modal-entry class. strength=2 by risk judgement because no money, auth, or data-loss factors apply; no covering-array sweep was needed because this path varies by a single entry action.'

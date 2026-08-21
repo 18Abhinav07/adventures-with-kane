@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The format chooser shows exactly three export formats.","kind":"count","risk":"low","derived":true,"expected_answer":{"operator":"equals","operand":3}}}

@@ -1,0 +1,91 @@
+.gaugeBlock {
+  padding: var(--space-4) 0 var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.gaugeMeta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.gaugeValue {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.gaugeStatus {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-warning);
+}
+
+.metricList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.metricValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+.warning {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-warning) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-warning) 30%, transparent);
+  text-align: left;
+  transition: background var(--dur-micro) var(--ease-standard), border-color var(--dur-micro) var(--ease-standard);
+}
+
+.warning:hover {
+  background: color-mix(in srgb, var(--color-warning) 16%, transparent);
+  border-color: color-mix(in srgb, var(--color-warning) 45%, transparent);
+}
+
+.warningIcon {
+  color: var(--color-warning);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.warningText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.warningText strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

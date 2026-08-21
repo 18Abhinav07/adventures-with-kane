@@ -1,0 +1,9 @@
+anchor: ac-165
+combinatorial:
+  reason: Applied state/flow because Escape changes the field from focused to unfocused. Applied equivalence partitioning because this covers the no-overlay branch of the ambiguous Escape promise. Negative and boundary techniques were not applicable because the source defines a dismissal transition, not invalid input handling or a numeric range. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because the branch has a single state variable.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state/flow because Escape changes the field from focused to unfocused. Applied equivalence partitioning because this covers the no-overlay branch of the ambiguous Escape promise. Negative and boundary techniques were not applicable because the source defines a dismissal transition, not invalid input handling or a numeric range. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because the branch has a single state variable.

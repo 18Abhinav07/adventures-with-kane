@@ -1,0 +1,128 @@
+.sidebar {
+  position: sticky;
+  top: var(--header-height);
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  height: calc(100vh - var(--header-height));
+  background: var(--color-surface-primary);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.scroll {
+  padding: var(--space-4) var(--space-3);
+}
+
+.section {
+  margin-bottom: var(--space-5);
+}
+
+.heading {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: background var(--dur-micro) var(--ease-standard), color var(--dur-micro) var(--ease-standard);
+}
+
+.item:hover {
+  background: var(--color-surface-secondary);
+}
+
+.icon {
+  flex-shrink: 0;
+  transition: color var(--dur-micro) var(--ease-standard);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-primary);
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: var(--color-information);
+}
+
+.active .icon {
+  color: var(--color-information);
+}
+
+.envBlock {
+  padding: var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.envTitle {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+}
+
+.envSubtitle {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1199px) and (min-width: 900px) {
+  .sidebar {
+    width: var(--sidebar-width-collapsed);
+  }
+  .label,
+  .heading,
+  .envSubtitle,
+  .envTitle {
+    display: none;
+  }
+  .item {
+    justify-content: center;
+    padding: 0;
+  }
+  .envBlock {
+    align-items: center;
+  }
+}
+
+@media (max-width: 899px) {
+  .sidebar {
+    display: none;
+  }
+}

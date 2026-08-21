@@ -1,0 +1,9 @@
+anchor: ac-160
+combinatorial:
+  reason: Applied a11y because the path is keyboard-only and the source requires focus indicators. Applied state/flow because the shortcut changes the field from unfocused to focused. Applied equivalence partitioning because keyboard shortcut entry is a distinct access path from direct focus. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because this path has no multi-input combination space.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied a11y because the path is keyboard-only and the source requires focus indicators. Applied state/flow because the shortcut changes the field from unfocused to focused. Applied equivalence partitioning because keyboard shortcut entry is a distinct access path from direct focus. Risk-judged combinatorial strength was 2 because only user-reach applied, but no covering_array expansion was needed because this path has no multi-input combination space.

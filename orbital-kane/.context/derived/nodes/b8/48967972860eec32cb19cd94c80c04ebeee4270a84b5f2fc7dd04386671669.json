@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The RESEARCH sidebar section contains Research Notes, Saved Views, and Reports.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"the RESEARCH sidebar section shows Research Notes, Saved Views, and Reports"}}}

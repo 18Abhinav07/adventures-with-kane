@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Selecting a different time-range value updates the displayed period comparison.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"displayed period comparison","baseline":"displayed period comparison before selecting a different time-range value"}}}

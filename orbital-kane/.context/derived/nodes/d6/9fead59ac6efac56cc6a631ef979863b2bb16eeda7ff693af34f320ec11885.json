@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The PRIMARY sidebar section contains Overview, Portfolio, Markets, Watchlist, and Transactions.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"the PRIMARY sidebar section shows Overview, Portfolio, Markets, Watchlist, and Transactions"}}}

@@ -1,0 +1,9 @@
+anchor: ac-25
+combinatorial:
+  reason: State/flow applied because the path verifies the cross-state reset from locked selection to cleared selection when another control changes chart context. Equivalence partitioning applied to use a representative time-range change rather than mint separate scenarios for each destination value because the expected outcome is the same cleared-selection state.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: State/flow applied because the path verifies the cross-state reset from locked selection to cleared selection when another control changes chart context. Equivalence partitioning applied to use a representative time-range change rather than mint separate scenarios for each destination value because the expected outcome is the same cleared-selection state.

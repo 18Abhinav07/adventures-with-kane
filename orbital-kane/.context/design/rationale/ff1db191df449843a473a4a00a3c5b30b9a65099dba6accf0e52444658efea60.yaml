@@ -1,0 +1,9 @@
+anchor: ac-46
+combinatorial:
+  reason: Applied equivalence partitioning to treat the five source-defined asset classes as the full default rendered set rather than separate outcome-changing paths. No boundary, negative, auth, or a11y expansion applied because the source specifies fixed read-only display content and no input, gate, or alternate empty/error state. Budget ceiling=8 existed; budget_cut kept this scenario because all later interaction checks rely on the correct default render.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied equivalence partitioning to treat the five source-defined asset classes as the full default rendered set rather than separate outcome-changing paths. No boundary, negative, auth, or a11y expansion applied because the source specifies fixed read-only display content and no input, gate, or alternate empty/error state. Budget ceiling=8 existed; budget_cut kept this scenario because all later interaction checks rely on the correct default render.

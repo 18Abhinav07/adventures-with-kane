@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The market overview displays one row for each of S&P 500, NASDAQ, DOW, and BTC/USD.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"forall","operand":"Rows for S&P 500, NASDAQ, DOW, and BTC/USD are present in the market overview."}}}

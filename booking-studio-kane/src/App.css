@@ -1,0 +1,283 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: var(--text-primary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 480px;
+}
+
+.booking-form-card {
+  margin-bottom: 16px;
+}
+
+.booking-form-card.shake {
+  animation: shake 250ms;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.room-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.chip.selected {
+  border: 2px solid var(--chip-color, var(--accent));
+  padding: 3px 11px;
+}
+
+.chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--chip-color, var(--accent));
+}
+
+.new-room-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.new-room-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100px;
+  padding: 4px 0;
+}
+
+.room-error {
+  width: 100%;
+  color: var(--error);
+  font-size: 12px;
+  margin-top: 4px;
+  animation: fade-in 150ms ease-in;
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+.field input.field-error {
+  border: 2px solid var(--error);
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 12px;
+  margin-top: 4px;
+  animation: fade-in 150ms ease-in;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+.bookings-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.booking-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--room-color, var(--accent));
+  border-bottom: 1px solid var(--border);
+}
+
+.booking-row:last-child {
+  border-bottom: none;
+}
+
+.room-pill {
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  background: var(--pill-bg);
+  color: var(--room-color);
+  flex-shrink: 0;
+}
+
+.booking-time {
+  color: var(--text-secondary);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.booking-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cancel-btn {
+  opacity: 0;
+  transition: opacity 150ms;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.booking-row:hover .cancel-btn,
+.booking-row:focus-within .cancel-btn {
+  opacity: 1;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 24px 16px;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.toast {
+  position: relative;
+  overflow: hidden;
+  min-width: 240px;
+  max-width: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  animation: toast-slide-in 200ms ease-out;
+}
+
+@keyframes toast-slide-in {
+  from { transform: translateX(110%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.toast-message {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.toast-undo-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-weight: bold;
+  padding: 0;
+  margin-top: 4px;
+}
+
+.toast-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: transparent;
+}
+
+.toast-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  animation-name: progress-shrink;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress-shrink {
+  from { width: 100%; }
+  to { width: 0%; }
+}

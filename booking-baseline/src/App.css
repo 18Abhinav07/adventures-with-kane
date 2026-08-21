@@ -1,0 +1,85 @@
+.booking-widget {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  text-align: left;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border, #ccc);
+  font-size: 14px;
+}
+
+.booking-form button[type='submit'] {
+  align-self: flex-start;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.error {
+  color: #b00020;
+  font-weight: 600;
+  margin: 8px 0 16px;
+}
+
+.empty {
+  opacity: 0.7;
+}
+
+.booking-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 6px;
+}
+
+.booking-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.booking-title {
+  flex: 1;
+}
+
+.cancel-btn {
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border, #ccc);
+  background: transparent;
+}

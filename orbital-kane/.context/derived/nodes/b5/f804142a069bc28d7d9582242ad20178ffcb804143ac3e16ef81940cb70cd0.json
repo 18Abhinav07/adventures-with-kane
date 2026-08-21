@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The chart center label is \"TOTAL\" by default.","kind":"absolute","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":"TOTAL"}}}

@@ -1,0 +1,9 @@
+anchor: ac-95
+combinatorial:
+  reason: Applied state/flow reasoning because hover is a state transition from the default row presentation to the hover presentation. I kept emphasis and sparkline enlargement together because the source states them as the positive hover outcome, while layout stability was separated as a distinct edge path. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Applied state/flow reasoning because hover is a state transition from the default row presentation to the hover presentation. I kept emphasis and sparkline enlargement together because the source states them as the positive hover outcome, while layout stability was separated as a distinct edge path. Budget estimate remained 4 scenarios, under the ceiling of 8, so no cut was needed.

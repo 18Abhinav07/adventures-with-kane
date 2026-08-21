@@ -1,0 +1,9 @@
+anchor: ac-140
+combinatorial:
+  reason: 'Techniques: state / flow + negative. Hover-marker absence is a distinct outcome from other chart options, so it stays separate. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: 'Techniques: state / flow + negative. Hover-marker absence is a distinct outcome from other chart options, so it stays separate. Risk strength judged as 2 because only user-reach applied; no money, auth, or data-loss factors were evidenced.'

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The risk monitor displays the current risk status as \"MODERATE\".","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"a displayed risk status of \"MODERATE\""}}}

@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Opening one alert shows that alert's detail within the alert list.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"expanded alert detail shown within the alert list"}}}

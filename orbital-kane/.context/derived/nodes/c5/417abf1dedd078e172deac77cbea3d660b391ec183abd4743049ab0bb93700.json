@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Re-enabling Benchmark makes the benchmark line visible on the performance chart again.","kind":"presence","risk":"med","derived":true,"expected_answer":{"operator":"exists","operand":"benchmark line on the performance chart"}}}

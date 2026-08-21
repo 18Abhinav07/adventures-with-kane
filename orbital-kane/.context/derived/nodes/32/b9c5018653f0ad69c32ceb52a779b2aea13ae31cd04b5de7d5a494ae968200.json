@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Selecting a different time-range value updates the visible x-axis labels.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"changed-by","operand":"visible x-axis labels","baseline":"visible x-axis labels before selecting a different time-range value"}}}

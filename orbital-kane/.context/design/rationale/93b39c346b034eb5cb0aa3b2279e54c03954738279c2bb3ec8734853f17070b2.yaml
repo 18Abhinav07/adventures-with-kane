@@ -1,0 +1,9 @@
+anchor: ac-11
+combinatorial:
+  reason: from the default non-money/auth/data-loss risk gate and degraded to effective_t=1 because only one input varied; enumerated representatives were 1D, 1W, 1M, 3M, YTD, 1Y, and ALL. Budget estimate remained within the 8-pair ceiling, so all representatives stayed in scope.
+  strength: 2
+deferred_bindings: 0
+expected_how: 'expected_mode: authored'
+profile_family: unspecified
+surface_state: absent
+technique: Equivalence partitioning over the segmented time-range control values. covering_array requested at strength=2 from the default non-money/auth/data-loss risk gate and degraded to effective_t=1 because only one input varied; enumerated representatives were 1D, 1W, 1M, 3M, YTD, 1Y, and ALL. Budget estimate remained within the 8-pair ceiling, so all representatives stayed in scope.

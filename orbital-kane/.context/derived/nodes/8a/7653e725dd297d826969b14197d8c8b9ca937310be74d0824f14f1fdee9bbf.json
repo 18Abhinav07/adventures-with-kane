@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"The market overview contains exactly four market rows.","kind":"count","risk":"med","derived":true,"expected_answer":{"operator":"equals","operand":4,"unit":"rows"}}}

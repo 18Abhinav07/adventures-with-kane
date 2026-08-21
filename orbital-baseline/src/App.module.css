@@ -1,0 +1,76 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  --density-gap: var(--space-5);
+  --density-card-padding: var(--space-5);
+  --density-section-gap: var(--space-6);
+}
+
+.shell[data-density='compact'] {
+  --density-gap: var(--space-3);
+  --density-card-padding: var(--space-4);
+  --density-section-gap: var(--space-4);
+}
+
+.shell[data-density='spacious'] {
+  --density-gap: var(--space-7);
+  --density-card-padding: var(--space-6);
+  --density-section-gap: var(--space-8);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--density-section-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--density-section-gap);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--density-gap);
+}
+
+.colSpan4 {
+  grid-column: span 4;
+}
+
+.colSpan5 {
+  grid-column: span 5;
+}
+
+.colSpan7 {
+  grid-column: span 7;
+}
+
+.colSpan8 {
+  grid-column: span 8;
+}
+
+.colSpan12 {
+  grid-column: span 12;
+}
+
+@media (max-width: 1199px) {
+  .colSpan4,
+  .colSpan5,
+  .colSpan7,
+  .colSpan8 {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 899px) {
+  .body {
+    flex-direction: column;
+  }
+}

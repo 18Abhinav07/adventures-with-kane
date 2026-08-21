@@ -1,0 +1,1 @@
+{"label":"ac","content":{"text":"Hovering a market row changes that row to an emphasized state.","kind":"state-transition","risk":"med","derived":true,"expected_answer":{"operator":"equals","baseline":"default row visual state","operand":"emphasized row visual state on hover"}}}

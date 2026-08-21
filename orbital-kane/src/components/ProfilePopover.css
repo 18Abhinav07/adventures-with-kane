@@ -1,0 +1,73 @@
+.profile-popover {
+  position: fixed;
+  width: 240px;
+  background: var(--elevated-surface);
+  border: 1px solid var(--strong-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  z-index: 90;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-popover-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-popover-name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--primary-text);
+}
+
+.profile-popover-role {
+  font-size: 12px;
+  color: var(--secondary-text);
+}
+
+.profile-popover-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.profile-popover-detail-label {
+  color: var(--muted-text);
+}
+
+.profile-popover-detail-value {
+  color: var(--primary-text);
+}
+
+.profile-popover-actions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.profile-popover-action {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--primary-text);
+  font-size: 12px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-popover-action:hover {
+  background: var(--secondary-surface);
+}
